@@ -14,6 +14,8 @@ print(1 - 4)
 
 print(4 * 5)
 
+print("-=* " * 10)
+
 print(5 / 4)
 
 print(89 // 7)

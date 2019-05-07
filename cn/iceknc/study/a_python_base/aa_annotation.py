@@ -16,3 +16,11 @@ class Hello():
     类注释
     """
     pass
+
+
+def func1():
+    """
+    函数注释
+    :return:
+    """
+    pass
