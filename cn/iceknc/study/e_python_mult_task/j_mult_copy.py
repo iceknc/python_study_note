@@ -39,6 +39,7 @@ def main():
         current_size += get
         progress = round(current_size * 100 / total_size, 2)
 
+        #控制进度大于0.01才打印
         if progress != current_progress:
             current_progress = progress
             print("progress -- %.02f%%" % current_progress)
