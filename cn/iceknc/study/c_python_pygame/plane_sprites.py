@@ -81,7 +81,7 @@ class Hero(GameSprite):
     origin_y = 0
 
     def __init__(self, is_alt=False):
-        # 1. 调用父类方法，设置image&speed
+        # 1. 调用父类方法，设置image&speed  两张图是因为要模拟英雄喷火的动画
         if is_alt:
             super().__init__("./images/me1.png", 0)
         else:

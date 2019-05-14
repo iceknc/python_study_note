@@ -25,7 +25,7 @@
         如果是当前执行的程序， __name__ 是 __main__
 """
 
-import cn.iceknc.study.b_python_oop.aa_oop as OOP
+import cn.iceknc.study.b_python_oop.a_oop as OOP
 
 print(OOP.__file__)
 
