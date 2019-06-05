@@ -23,11 +23,11 @@ def route(url):
 
         def func2(file_name):
             return fun(file_name)
-
+        return  func2
     return func1
 
 
-@route("/index_advance.html")
+@route(r"/index_advance.html")
 def index(file_name):
     try:
         file_name = file_name.replace(".py", ".html")
@@ -69,7 +69,7 @@ def index(file_name):
         return content
 
 
-@route("/center_advance.html")
+@route(r"/center_advance.html")
 def center(file_name):
     try:
         file_name = file_name.replace(".py", ".html")
