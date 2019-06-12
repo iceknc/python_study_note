@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css基本语法</title>
+
+    <!--
+    1、外联式：通过link标签，链接到外部样式表到页面中。
+    -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--
+    2、嵌入式：通过style标签，在网页上创建嵌入的样式表。
+    -->
+    <style type="text/css">
+        h2 {
+            width: 100px;
+            height: 100px;
+            color: red
+        }
+    </style>
+</head>
+<body>
+<h1>
+    这个一个大标题
+</h1>
+<h2>
+    这个一个小一点的大标题
+</h2>
+
+
+<!--
+3、内联式：通过标签的style属性，在标签上直接写样式。
+-->
+<h3 style="color: green">
+    这个一个小一点的标题
+</h3>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<!--
+表单用于搜集不同类型的用户输入，表单由不同类型的标签组成，相关标签及属性用法如下：
+    <form>标签 定义整体的表单区域
+        action属性 定义表单数据提交地址
+        method属性 定义表单提交的方式，一般有“get”方式和“post”方式
+
+        <label>标签 为表单元素定义文字标注
+
+        <input>标签 定义通用的表单元素
+            type属性
+                type="text" 定义单行文本输入框
+                type="password" 定义密码输入框
+                type="radio" 定义单选框
+                type="checkbox" 定义复选框
+                type="file" 定义上传文件
+                type="submit" 定义提交按钮
+                type="reset" 定义重置按钮
+                type="button" 定义一个普通按钮
+                type="image" 定义图片作为提交按钮，用src属性定义图片地址
+                type="hidden" 定义一个隐藏的表单域，用来存储值
+            value属性 定义表单元素的值
+            name属性 定义表单元素的名称，此名称是提交数据时的键名
+
+        <textarea>标签 定义多行文本输入框
+
+        <select>标签 定义下拉表单元素
+
+        <option>标签 与<select>标签配合，定义下拉表单元素中的选项
+-->
+
+<form action="http://www..." method="get">
+    <p>
+        <label for="username">姓名：</label><input type="text" name="username" id="username"/>
+    </p>
+    <p>
+        <label for="password">密码：</label><input type="password" name="password" id="password"/>
+    </p>
+    <p>
+        <label>性别：</label>
+        <input type="radio" name="gender" value="0" id="male"/> <label for="male">男</label>
+        <input type="radio" name="gender" value="1" id="female"/> <label for="female">女</label>
+    </p>
+    <p>
+        <label>爱好：</label>
+        <input type="checkbox" name="like" value="sing"/> 唱歌
+        <input type="checkbox" name="like" value="run"/> 跑步
+        <input type="checkbox" name="like" value="swiming"/> 游泳
+    </p>
+    <p>
+        <label>照片：</label>
+        <input type="file" name="person_pic">
+    </p>
+    <p>
+        <label>个人描述：</label>
+        <textarea name="about"></textarea>
+    </p>
+    <p>
+        <label>籍贯：</label>
+        <select name="site">
+            <option value="0">北京</option>
+            <option value="1">上海</option>
+            <option value="2">广州</option>
+            <option value="3">深圳</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" name="" value="提交">
+        <!-- input类型为submit定义提交按钮
+             还可以用图片控件代替submit按钮提交，一般会导致提交两次，不建议使用。如：
+             <input type="image" src="xxx.gif">
+        -->
+        <input type="reset" name="" value="重置">
+    </p>
+</form>
+</body>
+</html>

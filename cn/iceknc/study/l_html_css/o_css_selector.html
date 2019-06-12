@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+
+    <style type="text/css">
+        /*标签选择器*/
+        * { /*作用于所有标签*/
+            color: red
+        }
+
+        div {
+            font-size: x-large
+        }
+
+
+        /*id选择器 一般不用*/
+        #id_selector {
+            text-indent: 50px
+        }
+
+        /*类选择器 开发常用*/
+        .class_selector {
+            text-align: center;
+        }
+
+        /*层级选择器 主要应用在选择父元素下的子元素，或者子元素下面的子元素，可与标签元素结合使用，减少命名，
+        同时也可以通过层级，防止命名冲突。*/
+        .box {
+            color: red;
+        }
+
+        .box span {
+            color: #004faf;
+        }
+
+        .box span .i {
+            font-style: italic;
+        }
+
+        /*组选择器 多个选择器，如果有同样的样式设置，可以使用组选择器。*/
+        .g1, .g2, .g3 {
+            width: 100px;
+            height: 100px
+        }
+
+        .g1 {
+            background: gold;
+        }
+
+        .g2 {
+            background: green
+        }
+
+        .g3 {
+            background: blue
+        }
+
+        /*伪类及伪元素选择器  常用的伪类选择器有hover，表示鼠标悬浮在元素上时的状态，伪元素选择器有before和after,
+        它们可以通过样式在元素中插入内容。*/
+        .fade1:hover {
+            color: green;
+        }
+
+        .fade2:before {
+            content: '行首文字';
+        }
+
+        .fade3:after {
+            content: '行尾文字';
+        }
+    </style>
+</head>
+<body>
+<h1 id="id_selector">
+    id选择器
+</h1>
+
+<h1 class="class_selector">
+    类选择器
+</h1>
+
+<h1 class="box">
+    层级<span>选择<span class="i">器</span></span>
+</h1>
+
+<h1 class="g1">
+    组选择器1
+</h1>
+<h1 class="g2">
+    组选择器2
+</h1>
+<h1 class="g3">
+    组选择器3
+</h1>
+
+<a href="g_image.html" class="fade1">
+    伪类及伪元素选择器hover
+</a>
+<h1 class="fade2">
+    伪类及伪元素选择器before
+</h1>
+<h1 class="fade3">
+    伪类及伪元素选择器after
+</h1>
+</body>
+</html>
