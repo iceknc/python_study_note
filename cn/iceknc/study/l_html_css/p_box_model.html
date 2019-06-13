@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+
+    <style type="text/css">
+        .test {
+            width: min-content;
+            height: min-content;
+
+            background-color: #2a6496;
+
+            border-top-color: red;
+            border-style: dashed;
+            border-width: 10px;
+
+            padding: 20px 50px 100px;
+
+            margin-left: 200px;
+        }
+
+        .box01 {
+            width: 50px;
+            height: 50px;
+            background-color: gold;
+        }
+
+        .box02 {
+            width: 50px;
+            height: 50px;
+            background-color: gold;
+            border: 50px solid #000
+        }
+
+        .box03 {
+            width: 50px;
+            height: 50px;
+            background-color: gold;
+            border: 50px solid #000;
+            padding: 50px;
+        }
+
+        .box_test{
+            width: 400px;
+            height: 35px;
+            border-top: 1px solid red;
+            border-bottom: 3px solid #666;
+
+            padding-left: 20px;
+            padding-top: 15px;
+            line-height: 20px;
+
+            font-size: 20px;
+            color: #333;
+            font-family: "Microsoft YaHei UI";
+            font-weight: normal;
+        }
+        .box_test_advance{
+            width: 400px;
+            height: 50px;
+            border-top: 1px solid red;
+            border-bottom: 3px solid #666;
+
+            text-indent: 20px;
+            line-height: 50px;
+
+            font-size: 20px;
+            color: #333;
+            font-family: "Microsoft YaHei UI";
+            font-weight: normal;
+        }
+    </style>
+
+</head>
+<body>
+<!--
+盒子模型解释
+    元素在页面中显示成一个方块，类似一个盒子，CSS盒子模型就是使用现实中盒子来做比喻，帮助我们设置元素对应的样式。
+
+    把元素叫做盒子，设置对应的样式分别为：盒子的宽度(width)、盒子的高度(height)、盒子的边框(border)、
+    盒子内的内容和边框之间的间距(padding)、盒子与盒子之间的间距(margin)。
+
+    设置宽高
+        width:200px;
+            /* 设置盒子的宽度，此宽度是指盒子内容的宽度，不是盒子整体宽度(难点) */
+            盒子宽度 = width + padding左右 + border左右
+        height:200px;
+            /* 设置盒子的高度，此高度是指盒子内容的高度，不是盒子整体高度(难点) */
+            盒子高度 = height + padding上下 + border上下
+
+
+    设置边框
+        border-top-color:red;    /* 设置顶部边框颜色为红色 */
+        border-top-width:10px;   /* 设置顶部边框粗细为10px */
+        border-top-style:solid;  /* 设置顶部边框的线性为实线，常用的有：solid(实线)  dashed(虚线)  dotted(点线); */
+
+        上面三句可以简写成一句：border-top:10px solid red;
+
+        四个边如果设置一样，可以将四个边的设置合并成一句：border:10px solid red;
+
+    设置内间距padding
+        padding-top：20px;     /* 设置顶部内间距20px */
+        padding-left:30px;     /* 设置左边内间距30px */
+        padding-right:40px;    /* 设置右边内间距40px */
+        padding-bottom:50px;   /* 设置底部内间距50px */
+
+        上面的设置可以简写如下:
+            padding：20px 40px 50px 30px; /* 四个值按照顺时针方向，分别设置的是 上 右 下 左  四个方向的内边距值。 */
+
+        padding后面还可以跟3个值，2个值和1个值，它们分别设置的项目如下：
+            padding：20px 40px 50px; /* 设置顶部内边距为20px，左右内边距为40px，底部内边距为50px */
+            padding：20px 40px; /* 设置上下内边距为20px，左右内边距为40px*/
+            padding：20px; /* 设置四边内边距为20px */
+
+    设置外间距margin
+        同padding
+-->
+
+<h1 class="test">
+    盒子模型练习
+</h1>
+
+<div class="box01">1</div>
+<br/>
+<div class="box02">2</div>
+<br/>
+<div class="box03">3</div>
+<br />
+<div class="box_test">
+    盒子模型练习2
+</div>
+<br />
+<div class="box_test_advance">
+    盒子模型练习3
+</div>
+</body>
+</html>
