@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动布局</title>
+    <style type="text/css">
+        .menu {
+            width: 694px;
+            height: 50px;
+            margin: 50px auto;
+            /*去掉小圆点*/
+            list-style: none;
+            padding: 0px;
+            font-size: 0px;
+        }
+
+        .menu li {
+            width: 98px;
+            height: 48px;
+            border: 1px solid gold;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .menu li a {
+            width: 98px;
+            height: 48px;
+            display: inline-block;
+            font-family: "Microsoft YaHei";
+            color: pink;
+            text-align: center;
+            line-height: 48px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .menu li a:hover {
+            background-color: gold;
+            color: white;
+        }
+
+        .list {
+            width: 210px;
+            border: 1px solid black;
+            margin: 50px auto;
+            /*去掉小圆点*/
+            list-style: none;
+            padding: 0px;
+            /*overflow: hidden;*/
+        }
+
+        .list li {
+            width: 50px;
+            height: 50px;
+            background-color: gold;
+            margin: 10px;
+            float: left;
+        }
+
+        /*.clearfix:before{
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after{
+            content: "";
+            display: table;
+            clear: both;
+        }*/
+
+        .clearfix:before, .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1; /*兼容ie*/
+        }
+
+        .title {
+            width: 400px;
+            height: 40px;
+            margin: 50px auto;
+            border-bottom: 1px solid #ff8200;
+            font-size: 0px;
+        }
+
+        .title h3 {
+            width: 80px;
+            float: left;
+            line-height: 40px;
+            background-color: #ff8200;
+            margin: 0px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .title a {
+            float: right;
+            font-size: 14px;
+            color: #666;
+            line-height: 40px;
+            text-decoration: none;
+        }
+
+        .round {
+            width: 450px;
+            height: 210px;
+            border: 1px solid black;
+            margin: 10px auto;
+        }
+
+        .round img {
+            float: left;
+            margin: 10px 10px 0 10px;
+        }
+
+        .round div {
+            margin: 10px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+浮动
+    浮动特性
+        1、浮动元素有左浮动(float:left)和右浮动(float:right)两种
+        2、浮动的元素会向左或向右浮动，碰到父元素边界、其他元素才停下来
+        3、相邻浮动的块元素可以并在一行，超出父级宽度就换行
+        4、浮动让行内元素或块元素自动转化为行内块元素(此时不会有行内块元素间隙问题)
+        5、浮动元素后面没有浮动的元素会占据浮动元素的位置，没有浮动的元素内的文字会避开浮动的元素，形成文字饶图的效果
+        6、父元素如果没有设置尺寸(一般是高度不设置)，父元素内整体浮动的元素无法撑开父元素，父元素需要清除浮动
+            父级上增加属性overflow：hidden
+            在最后一个子元素的后面加一个空的div，给它样式属性 clear:both（不推荐）
+            使用成熟的清浮动样式类，clearfix
+        7、浮动元素之间没有垂直margin的合并
+-->
+
+
+<ul class="menu">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">公司简介</a></li>
+    <li><a href="#">解决方案</a></li>
+    <li><a href="#">公司新闻</a></li>
+    <li><a href="#">行业动态</a></li>
+    <li><a href="#">招贤纳士</a></li>
+    <li><a href="#">联系我们</a></li>
+</ul>
+
+<ul class="list clearfix">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">公司简介</a></li>
+    <li><a href="#">解决方案</a></li>
+    <li><a href="#">公司新闻</a></li>
+    <li><a href="#">行业动态</a></li>
+    <li><a href="#">招贤纳士</a></li>
+    <li><a href="#">联系我们</a></li>
+    <!--<div style="clear:both"></div>-->
+</ul>
+
+<div class="title">
+    <h3>新闻列表</h3>
+    <a href="#">更多&gt;</a>
+</div>
+
+<div class="round">
+    <img src="images/bg.jpg">
+    <div>
+        1、浮动元素有左浮动(float:left)和右浮动(float:right)两种
+
+        2、浮动的元素会向左或向右浮动，碰到父元素边界、其他元素才停下来
+
+        3、相邻浮动的块元素可以并在一行，超出父级宽度就换行
+
+        4、浮动让行内元素或块元素自动转化为行内块元素(此时不会有行内块元素间隙问题)
+
+        5、浮动元素后面没有浮动的元素会占据浮动元素的位置，没有浮动的元素内的文字会避开浮动的元素，形成文字饶图的效果
+
+        6、父元素如果没有设置尺寸(一般是高度不设置)，父元素内整体浮动的元素无法撑开父元素，父元素需要清除浮动
+    </div>
+</div>
+</body>
+</html>
