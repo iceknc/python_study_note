@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景</title>
+    <style type="text/css">
+        .bg {
+            width: 400px;
+            height: 200px;
+            border: 5px solid black;
+            margin: 0 auto;
+
+            background-image: url("images/bg.jpg");
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+
+        .bg_advance {
+            width: 400px;
+            height: 200px;
+            border: 5px solid black;
+            margin: 50px auto;
+
+            background: url("images/bg.jpg") 20px 20px coral no-repeat;
+        }
+
+        .location {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px auto;
+
+            background: url("images/location_bg.jpg") -110px -150px no-repeat;
+        }
+
+        .xuebi {
+            width: 300px;
+            height: 305px;
+            list-style: none;
+            margin: 20px auto;
+            padding: 0px;
+        }
+
+        .xuebi li {
+            height: 60px;
+            border-bottom: 1px dotted black;
+            line-height: 60px;
+            text-indent: 50px;
+
+            background: url("images/bg01.png") left 10px no-repeat;
+        }
+
+        .xuebi .li1 {
+            background: url("images/bg01.png") left -71px no-repeat;
+        }
+        .xuebi .li2 {
+            background: url("images/bg01.png") left -154px no-repeat;
+        }
+        .xuebi .li3 {
+            background: url("images/bg01.png") left -235px no-repeat;
+        }
+        .xuebi .li4 {
+            background: url("images/bg01.png") left -315px no-repeat;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+background属性是css中应用比较多，且比较重要的一个属性，它是负责给盒子设置背景图片和背景颜色的，
+background是一个复合属性，它可以分解成如下几个设置项：
+    background-color 设置背景颜色
+    background-image 设置背景图片地址
+    background-repeat 设置背景图片如何重复平铺
+        repeat-x:只平铺x轴
+        repeat-y:只平铺y轴
+        no-repeat:不平铺
+        repeat:默认，平铺整个区域
+    background-position 设置背景图片的位置
+        可以在水平方向设置“left”、“center”、“right”，在垂直方向设置“top”、“center”、“bottom”，
+        除了设置这些方位词之外，还可以设置具体的数值
+    background-attachment 设置背景图片是固定还是随着页面滚动条滚动
+
+实际应用中，我们可以用background属性将上面所有的设置项放在一起，而且也建议这么做，这样做性能更高，而且兼容性更好，
+    比如：“background: #00FF00 url(bgimage.gif) no-repeat left center fixed”，
+    这里面的“#00ff00”是设置background-color；“url(bgimage.gif)”是设置background-image；“no-repeat”
+    是设置background-repeat；“left center”是设置background-position；“fixed”是设置background-attachment，
+    各个设置项用空格隔开，有的设置项不写也是可以的，它会使用默认值。
+-->
+<div class="bg"></div>
+<div class="bg_advance"></div>
+<div class="location"></div>
+
+<ul class="xuebi">
+    <li>美人鱼</li>
+    <li class="li1">疯狂动物城</li>
+    <li class="li2">魔兽</li>
+    <li class="li3">美国队长3:英雄内战</li>
+    <li class="li4">湄公河行动</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <style type="text/css">
+        .p1 {
+            width: 600px;
+            height: 40px;
+            margin: 0 auto;
+            border: 1px solid grey;
+            text-align: center;
+            list-style: none;
+            padding: 0;
+            font-size: 0;
+        }
+
+        .p1 .yellow {
+            height: 26px;
+            display: inline-block;
+            font-size: 12px;
+            margin: 7px 5px 0;
+        }
+
+        .p1 .withe {
+            height: 26px;
+            background: white;
+            display: inline-block;
+            font-size: 12px;
+            margin: 7px 5px 0;
+        }
+
+        .p1 .yellow a {
+            display: block;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 10px;
+            text-decoration: none;
+            font-family: "Microsoft YaHei";
+            color: black;
+            background: gold;
+        }
+
+        .p1 .withe a {
+            display: block;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 10px;
+            text-decoration: none;
+            font-family: "Microsoft YaHei";
+            color: black;
+        }
+
+        .p1 li a:hover {
+            background: #9c9cff;
+        }
+
+        .p2 {
+            width: 958px;
+            height: 40px;
+            border: 1px solid black;
+            margin: 50px auto;
+
+            list-style: none;
+
+            font-size: 0;
+            text-align: center;
+        }
+
+        .p2 li {
+            display: inline-block;
+            font-size: 14px;
+            font-family: "Microsoft YaHei";
+            color: #333;
+        }
+
+        .p2 li a {
+            font-size: 14px;
+            font-family: "Microsoft YaHei";
+            color: #333;
+            padding: 0 20px;
+            height: 40px;
+            line-height: 40px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .p2 li a:hover {
+            color: #ff8200;
+        }
+
+        .p3 {
+            width: 960px;
+            height: 40px;
+            margin: 50px auto;
+            background: #55a8ea;
+            list-style: none;
+
+            font-size: 0;
+            text-align: center;
+            padding: 0;
+
+            position: relative;
+        }
+
+        .p3 li {
+            width: 100px;
+            display: inline-block;
+            float: left;
+        }
+
+        .p3 li a {
+            font-size: 14px;
+            font-family: "Microsoft YaHei";
+            color: white;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+        }
+
+        .p3 li a:hover {
+            background: #00619f;
+        }
+
+        .p3 .new {
+            width: 33px;
+            height: 20px;
+            background: url("images/new.png") no-repeat;
+            position: absolute;
+            left: 430px;
+            top: -8px;
+        }
+
+        .p4 {
+            width: 958px;
+            border: 1px solid #666;
+            margin: 10px auto;
+        }
+
+        .p4_title_con {
+            width: 918px;
+            height: 50px;
+            margin-left: 20px;
+            border-bottom: 1px solid #666;
+        }
+
+        .p4_title_con h3 {
+            float: left;
+            font: normal 18px/50px 'Microsoft Yahei';
+            margin: 0;
+            padding: 0 10px;
+            border-bottom: 2px solid red;
+        }
+
+        .p4_list_con {
+            width: 918px;
+            margin: 20px auto 13px;
+            overflow: hidden;
+        }
+
+        .p4_list_con ul {
+            list-style: none;
+            padding: 0;
+            width: 950px;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .p4_list_con ul li {
+            width: 160px;
+            height: 68px;
+            float: left;
+            margin: 0 29px 25px 0;
+        }
+
+        .p5 {
+            width: 600px;
+            border: 1px solid #666;
+            margin: 10px auto;
+            overflow: hidden;
+            padding-bottom: 10px;
+        }
+
+        .p5_title_con {
+            width: 560px;
+            height: 50px;
+            margin: 0 auto;
+            border-bottom: 1px solid #666;
+        }
+
+        .p5_title_con h3 {
+            float: left;
+            font: normal 18px/50px 'Microsoft Yahei';
+            margin: 0;
+            padding: 0 10px;
+            border-bottom: 2px solid red;
+        }
+
+        .p5_list_con{
+            width: 560px;
+            overflow: hidden;
+            margin: 10px auto;
+        }
+
+        .p5_list_con ul{
+            margin: 0;
+            padding-left: 15px;
+        }
+
+        .p5_list_con ul li {
+            width: 560px;
+            float: left;
+            padding: 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .p5_list_con ul li a .left {
+            float: left;
+            text-decoration: none;
+            font: 14px/28px "Microsoft YaHei";
+            color: black;
+        }
+
+        .p5_list_con ul li a .right {
+            float: right;
+            margin-right: 20px;
+            text-decoration: none;
+            font: 14px/36px "Microsoft YaHei";
+            color: black;
+        }
+
+        .p5_list_con ul li a:hover{
+            background: grey;
+        }
+
+    </style>
+</head>
+<body>
+<ul class="p1">
+    <li class="yellow"><a href="#">上一页</a></li>
+    <li class="yellow"><a href="#">1</a></li>
+    <li class="yellow"><a href="#">2</a></li>
+    <li class="yellow"><a href="#">3</a></li>
+    <li class="yellow"><a href="#">4</a></li>
+    <li class="withe"><a href="#">...</a></li>
+    <li class="yellow"><a href="#">17</a></li>
+    <li class="yellow"><a href="#">18</a></li>
+    <li class="yellow"><a href="#">19</a></li>
+    <li class="yellow"><a href="#">20</a></li>
+    <li class="yellow"><a href="#">下一页</a></li>
+</ul>
+
+<ul class="p2">
+    <li><a href="#">首页</a></li>
+    <li>|</li>
+    <li><a href="#">网站建设</a></li>
+    <li>|</li>
+    <li><a href="#">程序开发</a></li>
+    <li>|</li>
+    <li><a href="#">网络营销</a></li>
+    <li>|</li>
+    <li><a href="#">企业VI</a></li>
+    <li>|</li>
+    <li><a href="#">案例展示</a></li>
+    <li>|</li>
+    <li><a href="#">联系我们</a></li>
+</ul>
+
+<ul class="p3">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">网站建设</a></li>
+    <li><a href="#">程序开发</a></li>
+    <li><a href="#">网络营销</a></li>
+    <li><a href="#">企业VI</a></li>
+    <li><a href="#">案例展示</a></li>
+    <li><a href="#">联系我们</a></li>
+    <li class="new"></li>
+</ul>
+
+<div class="p4">
+    <div class="p4_title_con"><h3>图片展示</h3></div>
+    <div class="p4_list_con">
+        <ul>
+            <li><a href="#"><img src="images/goods.jpg" alt="商品图片"></a></li>
+            <li><a href="#"><img src="images/goods.jpg" alt="商品图片"></a></li>
+            <li><a href="#"><img src="images/goods.jpg" alt="商品图片"></a></li>
+            <li><a href="#"><img src="images/goods.jpg" alt="商品图片"></a></li>
+            <li><a href="#"><img src="images/goods.jpg" alt="商品图片"></a></li>
+            <li><a href="#"><img src="images/goods.jpg" alt="商品图片"></a></li>
+            <li><a href="#"><img src="images/goods.jpg" alt="商品图片"></a></li>
+            <li><a href="#"><img src="images/goods.jpg" alt="商品图片"></a></li>
+            <li><a href="#"><img src="images/goods.jpg" alt="商品图片"></a></li>
+            <li><a href="#"><img src="images/goods.jpg" alt="商品图片"></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="p5">
+    <div class="p5_title_con"><h3>新闻列表</h3></div>
+    <div class="p5_list_con">
+        <ul>
+            <li><a href="#">
+                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
+                <div class="right">2016-06-22</div>
+            </a></li>
+            <li><a href="#">
+                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
+                <div class="right">2016-06-22</div>
+            </a></li>
+            <li><a href="#">
+                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
+                <div class="right">2016-06-22</div>
+            </a></li>
+            <li><a href="#">
+                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
+                <div class="right">2016-06-22</div>
+            </a></li>
+            <li><a href="#">
+                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
+                <div class="right">2016-06-22</div>
+            </a></li>
+            <li><a href="#">
+                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
+                <div class="right">2016-06-22</div>
+            </a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
