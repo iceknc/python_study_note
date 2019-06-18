@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition动画</title>
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            /* transition:width 1s ease,height 1s ease 1s,background-color 1s ease 2s; */
+            /*
+            多个属性同时做动画，可以合并成下面一句
+            transition:width 1s ease,height 1s ease,background-color 1s ease;
+            */
+            transition: all 3s ease;
+        }
+
+        .box:hover {
+            width: 600px;
+            height: 500px;
+            background-color: red;
+        }
+
+        .box5 {
+
+            width: 200px;
+            height: 200px;
+            border: 3px solid #000;
+            background-color: gold;
+            margin: 50px auto 0;
+
+            /* translate位移比定位做的位移性能高，建议使用这种位移 */
+            transform: translate(0px, 0px);
+            transition: all 500ms ease;
+        }
+
+
+        .box5:hover {
+            transform: translate(30px, 30px);
+        }
+
+
+        .box2 {
+
+            width: 200px;
+            height: 200px;
+            border: 3px solid #000;
+            background-color: gold;
+            margin: 50px auto 0;
+            transform: scale(1, 1);
+            transition: all 500ms ease;
+        }
+
+        .box2:hover {
+            transform: scale(2, 2);
+        }
+
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            border: 3px solid #000;
+            background-color: gold;
+            margin: 50px auto 0;
+            transform: rotate(0deg);
+            transition: all 500ms ease;
+        }
+
+        .box3:hover {
+            transform: rotate(45deg);
+        }
+
+
+        .box4 {
+            width: 200px;
+            height: 200px;
+            border: 3px solid #000;
+            background-color: gold;
+            margin: 50px auto 0;
+            transform: skew(0, 0);
+            transition: all 500ms ease;
+        }
+
+        .box4:hover {
+            transform: skew(0, 45deg);
+        }
+
+        .pic_con {
+            width: 200px;
+            height: 300px;
+            margin: 50px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pic_info {
+            position: absolute;
+            left: 0;
+            top: 300px;
+            width: 180px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            padding: 10px;
+            transition: all 500ms ease;
+        }
+
+        .pic_con:hover .pic_info {
+            top: 180px;
+        }
+
+        .box6{
+            width:300px;
+            height:272px;
+            margin:50px auto 0;
+            transform-style:preserve-3d;
+            position:relative;
+        }
+        .box6 .pic{
+            width:300px;
+            height:272px;
+            position:absolute;
+            background-color:cyan;
+            left:0;
+            top:0;
+            transform:perspective(800px) rotateY(0deg);
+            backface-visibility:hidden;
+            transition:all 500ms ease;
+        }
+        .box6 .back_info{
+            width:300px;
+            height:272px;
+            text-align:center;
+            line-height:272px;
+            background-color:gold;
+            position:absolute;
+            left:0;
+            top:0;
+            transform:rotateY(180deg);
+            backface-visibility:hidden;
+            transition:all 500ms ease;
+        }
+        .box6:hover .pic{
+            transform:perspective(800px) rotateY(180deg);
+        }
+        .box6:hover .back_info{
+            transform:perspective(800px) rotateY(0deg);
+        }
+    </style>
+</head>
+<body>
+<!--
+CSS3 transition动画
+    1、transition-property 设置过渡的属性，比如：width height background-color
+    2、transition-duration 设置过渡的时间，比如：1s 500ms
+    3、transition-timing-function 设置过渡的运动方式，常用有 linear(匀速)|ease(缓冲运动)
+    4、transition-delay 设置动画的延迟
+    5、transition: property duration timing-function delay 同时设置四个属性
+
+CSS3 transform变换
+    1、translate(x,y) 设置盒子位移
+    2、scale(x,y) 设置盒子缩放
+    3、rotate(deg) 设置盒子旋转
+    4、skew(x-angle,y-angle) 设置盒子斜切
+    5、perspective 设置透视距离
+    6、transform-style flat | preserve-3d 设置盒子是否按3d空间显示
+    7、translateX、translateY、translateZ 设置三维移动
+    8、rotateX、rotateY、rotateZ 设置三维旋转
+    9、scaleX、scaleY、scaleZ 设置三维缩放
+    10、tranform-origin 设置变形的中心点
+    11、backface-visibility 设置盒子背面是否可见
+-->
+<div class="box"></div>
+<div class="pic_con">
+    <img src="images/banner01.jpg" alt="banner">
+    <div class="pic_info">
+        <h3>文字说明标题</h3>
+        <p>文字说明文字说明文字说明文字说明</p>
+    </div>
+</div>
+
+<div class="box5"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+
+<div class="box6">
+        <div class="pic"><img src="images/location_bg.jpg"></div>
+        <div class="back_info">背面文字说明</div>
+    </div>
+</body>
+</html>

@@ -177,64 +177,153 @@
 
         .p5 {
             width: 600px;
+            height: 290px;
             border: 1px solid #666;
             margin: 10px auto;
             overflow: hidden;
-            padding-bottom: 10px;
         }
 
         .p5_title_con {
             width: 560px;
             height: 50px;
             margin: 0 auto;
-            border-bottom: 1px solid #666;
+            border-bottom: 1px solid #ddd;
         }
 
         .p5_title_con h3 {
             float: left;
             font: normal 18px/50px 'Microsoft Yahei';
             margin: 0;
+            color: black;
             padding: 0 10px;
             border-bottom: 2px solid red;
         }
 
-        .p5_list_con{
+        .p5_list_con {
             width: 560px;
             overflow: hidden;
-            margin: 10px auto;
-        }
-
-        .p5_list_con ul{
-            margin: 0;
-            padding-left: 15px;
-        }
-
-        .p5_list_con ul li {
-            width: 560px;
-            float: left;
+            margin: 8px auto 0;
+            list-style: none;
             padding: 0;
-            border-bottom: 1px solid #eee;
         }
 
-        .p5_list_con ul li a .left {
+        .p5_list_con li {
+            height: 38px;
+            border-bottom: 1px solid #f0f0f0;
+            background: url(images/point.gif) left center no-repeat;
+        }
+
+        .p5_list_con li a {
             float: left;
+            text-indent: 30px;
+            margin-left: 10px;
+            font: normal 14px/38px 'Microsoft Yahei';
+
+            background: url(images/icon.jpg) left center no-repeat;
+            color: #000;
             text-decoration: none;
-            font: 14px/28px "Microsoft YaHei";
-            color: black;
         }
 
-        .p5_list_con ul li a .right {
+        .p5_list_con li a:hover {
+            color: #f80;
+        }
+
+        .p5_list_con li span {
             float: right;
-            margin-right: 20px;
+            font: normal 14px/38px 'Microsoft Yahei';
+            color: #000;
+        }
+
+        .goods_list_con {
+            width: 498px;
+            height: 343px;
+            border: 1px solid red;
+            margin: 50px auto 0;
+        }
+
+
+        .goods_list_con h3 {
+            width: 440px;
+            height: 20px;
+            float: left;
+
+            margin: 30px 0 0 30px;
+            padding: 0;
+            font-size: 20px;
+            text-indent: 15px;
+            border-left: 5px solid red;
+
+            font: normal 20px/20px 'Microsoft Yahei';
+
+        }
+
+        .banner {
+            width: 212px;
+            height: 239px;
+            background-color: cyan;
+            float: left;
+            margin: 17px 0 0 30px;
+        }
+
+        .goods_list {
+            width: 211px;
+            height: 239px;
+
+            float: right;
+            margin: 17px 30px 0 0;
+        }
+
+        .goods_list dl {
+            margin: 0;
+            padding: 0;
+            width: 105px;
+            height: 142px;
+
+            float: left;
+        }
+
+        .goods_list dt {
+            width: 80px;
+            height: 85px;
+            margin: 0 auto;
+
+        }
+
+        .goods_list dd {
+            height: 57px;
+            line-height: 57px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .links_list {
+            width: 211px;
+            height: 97px;
+            float: left;
+
+        }
+
+        .links_list a {
+            float: left;
+            width: 104px;
+            height: 47px;
+            border: 1px dashed #ddd;
+
+            margin-left: -1px;
+            margin-top: -1px;
+
+            text-align: center;
+            line-height: 47px;
             text-decoration: none;
-            font: 14px/36px "Microsoft YaHei";
-            color: black;
+
+            font-size: 12px;
+            color: #666
         }
 
-        .p5_list_con ul li a:hover{
-            background: grey;
+        .links_list a:hover {
+            background-color: pink;
+            color: #fff;
         }
-
     </style>
 </head>
 <body>
@@ -299,33 +388,34 @@
 
 <div class="p5">
     <div class="p5_title_con"><h3>新闻列表</h3></div>
-    <div class="p5_list_con">
-        <ul>
-            <li><a href="#">
-                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
-                <div class="right">2016-06-22</div>
-            </a></li>
-            <li><a href="#">
-                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
-                <div class="right">2016-06-22</div>
-            </a></li>
-            <li><a href="#">
-                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
-                <div class="right">2016-06-22</div>
-            </a></li>
-            <li><a href="#">
-                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
-                <div class="right">2016-06-22</div>
-            </a></li>
-            <li><a href="#">
-                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
-                <div class="right">2016-06-22</div>
-            </a></li>
-            <li><a href="#">
-                <div class="left">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</div>
-                <div class="right">2016-06-22</div>
-            </a></li>
-        </ul>
+    <ul class="p5_list_con">
+        <li><a href="#">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</a><span>2017-4-17</span></li>
+        <li><a href="#">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</a><span>2017-4-17</span></li>
+        <li><a href="#">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</a><span>2017-4-17</span></li>
+        <li><a href="#">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</a><span>2017-4-17</span></li>
+        <li><a href="#">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</a><span>2017-4-17</span></li>
+        <li><a href="#">崔龙洙解苏宁因何打动他 要以学习额姿态去中超</a><span>2017-4-17</span></li>
+    </ul>
+</div>
+
+<div class="goods_list_con">
+    <h3>淘宝女装</h3>
+    <div class="banner"><img src="images/banner.jpg" alt="banner"></div>
+    <div class="goods_list">
+        <dl>
+            <dt><a href="#"><img src="images/cloth.jpg" alt="衣服"></a></dt>
+            <dd>时尚包包</dd>
+        </dl>
+        <dl>
+            <dt><a href="#"><img src="images/cloth02.jpg" alt="衣服"></a></dt>
+            <dd>时尚包包</dd>
+        </dl>
+        <div class="links_list">
+            <a href="">新品上市</a>
+            <a href="">新品上市</a>
+            <a href="">新品上市</a>
+            <a href="">新品上市</a>
+        </div>
     </div>
 </div>
 </body>

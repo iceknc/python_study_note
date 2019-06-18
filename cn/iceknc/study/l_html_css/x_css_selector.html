@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器</title>
+    <style type="text/css">
+        .list div:nth-child(2) {
+            background-color: red;
+        }
+        .list > h2{
+            color: cyan;
+        }
+
+        .list + h3{
+            color: pink;
+        }
+
+        div[data-attr='hello']{
+            font-weight: bold;
+            color: #9c9cff;
+        }
+    </style>
+</head>
+<body>
+<!--
+CSS3选择器
+    1、E:nth-child(n)：匹配元素类型为E且是父元素的第n个子元素
+    2、E:first-child：匹配元素类型为E且是父元素的第一个子元素
+    3、E:last-child：匹配元素类型为E且是父元素的最后一个子元素
+    4、E > F E元素下面第一层子集
+    5、E ~ F E元素后面的兄弟元素
+    6、E + F 紧挨着的后面的兄弟元素
+
+属性选择器：
+    1、E[attr] 含有attr属性的元素
+    2、E[attr='ok'] 含有attr属性的元素且它的值为“ok”
+    3、E[attr^='ok'] 含有attr属性的元素且它的值的开头含有“ok”
+    4、E[attr$='ok'] 含有attr属性的元素且它的值的结尾含有“ok”
+    5、E[attr*='ok'] 含有attr属性的元素且它的值中含有“ok”
+-->
+
+<div class="list">
+    <h2>h1</h2>
+    <h2>h2</h2>
+    <div><h2>ijk</h2>2</div>
+    <h3>opq</h3>
+    <div>3</div>
+    <div data-attr="hello">4</div>
+    <div>5</div>
+</div>
+<!-- 第2个子元素div匹配 -->
+</body>
+</html>

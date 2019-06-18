@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆角</title>
+    <style type="text/css">
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 3px solid #000;
+            background-color: gold;
+            margin: 50px auto 0;
+            border-top-left-radius: 60px;
+            border-top-right-radius: 100px;
+        }
+
+        .box1 {
+            width: 300px;
+            height: 300px;
+            border: 3px solid #000;
+            background-color: gold;
+            margin: 50px auto 0;
+            border-bottom-left-radius: 150px;
+            border-top-right-radius: 150px;
+        }
+
+        .box2 {
+            width: 300px;
+            height: 300px;
+            border: 3px solid #000;
+            background-color: gold;
+            margin: 50px auto 0;
+            /* border-radius:150px; */
+
+            border-radius: 50%;
+        }
+
+        body{
+			background:url(images/banner01.jpg);
+		}
+
+		.box3{
+			width:300px;
+			height:100px;
+			background-color:#000;
+			color:#fff;
+			font-size:30px;
+			text-align:center;
+			line-height:100px;
+            /* 元素透明的完整写法 */
+			opacity:0.3;
+			filter:alpha(opacity=30);
+		}
+
+		.box4{
+			width:300px;
+			height:100px;
+			background-color:rgba(0,0,0,0.3);
+			color:#fff;
+			font-size:30px;
+			text-align:center;
+			line-height:100px;
+			margin-top:50px;
+		}
+
+    </style>
+</head>
+<body>
+
+<!--
+CSS3圆角
+
+    设置某一个角的圆角，比如设置左上角的圆角：
+        border-top-left-radius:30px 60px;
+
+    同时分别设置四个角：
+        border-radius:30px 60px 120px 150px;
+
+    设置四个圆角相同：
+        border-radius:50%;
+
+rgba（新的颜色值表示法）
+    1、盒子透明度表示法：
+        .box
+        {
+            opacity:0.1;
+            /* 兼容IE */
+            filter:alpha(opacity=10);
+        }
+    2、rgba(0,0,0,0.1) 前三个数值表示颜色，第四个数值表示颜色的透明度
+-->
+
+<div class="box"></div>
+
+<div class="box1"></div>
+
+<div class="box2"></div>
+
+<div class="box3">这是3个div</div>
+
+	<div class="box4">这是第4个div</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation动画</title>
+    <STYLE type="text/css">
+        /*  定义动画  */
+
+        @keyframes moving {
+            from {
+                width: 100px;
+            }
+            to {
+                width: 500px;
+            }
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            animation: moving 500ms ease infinite alternate;
+
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes zhuan {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .fengche {
+            display: block;
+            width: 400px;
+            height: 400px;
+            margin: 20px auto 0;
+            animation: zhuan 800ms linear infinite;
+        }
+
+        .loading {
+            width: 300px;
+            height: 158px;
+            border: 1px solid black;
+            margin: 20px auto;
+        }
+
+        @keyframes loading_anim {
+            from {
+                transform: scale(1, 1);
+            }
+            to {
+                transform: scale(1, 0.2);
+            }
+        }
+
+        .loading div {
+            width: 30px;
+            height: 100px;
+            float: left;
+            background: #ff8200;
+            margin: 15px;
+            border-radius: 15px;
+            animation: loading_anim 500ms linear infinite alternate;
+        }
+
+        .loading div:nth-child(1) {
+            background-color: red;
+        }
+
+        .loading div:nth-child(2) {
+            background-color: green;
+            animation-delay: 100ms;
+        }
+
+        .loading div:nth-child(3) {
+            background-color: pink;
+            animation-delay: 200ms;
+        }
+
+        .loading div:nth-child(4) {
+            background-color: lightgreen;
+            animation-delay: 300ms;
+        }
+
+        .loading div:nth-child(5) {
+            background-color: cyan;
+            animation-delay: 400ms;
+        }
+
+        .loading p {
+            text-align: center;
+        }
+
+
+    </STYLE>
+</head>
+<body>
+<!--
+CSS3 animation动画
+    1、@keyframes 定义关键帧动画
+    2、animation-name 动画名称
+    3、animation-duration 动画时间
+    4、animation-timing-function 动画曲线 linear(匀速)|ease(缓冲)|steps(步数)
+    5、animation-delay 动画延迟
+    6、animation-iteration-count 动画播放次数 n|infinite
+    7、animation-direction 动画结束后是否反向还原 normal|alternate
+    8、animation-play-state 动画状态 paused(停止)|running(运动)
+    9、animation-fill-mode 动画前后的状态 none(缺省)|forwards(结束时停留在最后一帧)|backwards(开始时停留在定义的开始帧)|both(前后都应用)
+    10、animation:name duration timing-function delay iteration-count direction;同时设置多个属性
+-->
+<div class="box"></div>
+
+<br/>
+
+<img src="images/fengche.png" class="fengche">
+
+<div class="loading">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <p>loading...</p>
+</div>
+</body>
+</html>
