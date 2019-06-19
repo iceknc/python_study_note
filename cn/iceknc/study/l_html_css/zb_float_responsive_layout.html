@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流式布局+响应式布局</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/set_root.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        .float_layout a {
+            display: block;
+            /*width: calc(25% - 4px);*/
+            width: 25%;
+            box-sizing: border-box;
+            height: 100px;
+            background: pink;
+            text-align: center;
+            line-height: 100px;
+            float: left;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+
+            border: 2px solid black;
+        }
+
+        .responsive_layout div {
+            display: block;
+            width: 23%;
+            border: 2px solid black;
+            background: #ff8200;
+            height: 200px;
+            margin: 1%;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 800px) {
+            .responsive_layout div {
+                width: 46%;
+                margin: 2%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .responsive_layout div {
+                width: 96%;
+                margin: 4%;
+            }
+        }
+
+        .em15 {
+            display: block;
+            margin: 10px auto;
+            font-size: 15px;
+            width: 20em;
+            height: 10em;
+            float: left;
+            background-color: gold;
+        }
+
+        .em20 {
+            font-size: 20px;
+            width: 15em;
+            height: 10em;
+            background-color: greenyellow;
+            display: block;
+            margin: 10px auto;
+            float: left;
+        }
+        .rem15 {
+            display: block;
+            margin: 10px auto;
+            font-size: 15px;
+            width: 20rem;
+            height: 10rem;
+            float: left;
+            background-color: gold;
+        }
+
+        .rem20 {
+            font-size: 20px;
+            width: 15rem;
+            height: 10rem;
+            background-color: greenyellow;
+            display: block;
+            margin: 10px auto;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--
+PC及移动端页面适配方法
+
+设备屏幕有多种不同的分辨率，页面适配方案有如下几种：
+    1、全适配：响应式布局+流体布局
+    2、移动端适配：
+        流体布局+少量响应式
+        基于rem的布局
+
+流体布局
+    流体布局，就是使用百分比来设置元素的宽度，元素的高度按实际高度写固定值，流体布局中，
+    元素的边线无法用百分比，可以使用样式中的计算函数 calc() 来设置宽度，或者使用 box-sizing
+    属性将盒子设置为从边线计算盒子尺寸。
+
+    calc()
+    可以通过计算的方式给元素加尺寸，比如： width：calc(25% - 4px);
+
+    box-sizing
+        1、content-box 默认的盒子尺寸计算方式
+        2、border-box 置盒子的尺寸计算方式为从边框开始，盒子的尺寸，边框和内填充算在盒子尺寸内
+
+响应式布局
+    响应式布局就是使用媒体查询的方式，通过查询浏览器宽度，不同的宽度应用不同的样式块，每个样式块对应的是该宽
+    度下的布局方式，从而实现响应式布局。响应式布局的页面可以适配多种终端屏幕（pc、平板、手机）。
+
+    响应布局的伪代码如下：
+        @media (max-width:960px){
+            .left_con{width:58%;}
+            .right_con{width:38%;}
+        }
+        @media (max-width:768px){
+            .left_con{width:100%;}
+            .right_con{width:100%;}
+        }
+
+基于rem的布局
+    首先了解em单位，em单位是参照元素自身的文字大小来设置尺寸，rem指的是参照根节点的文字大小，
+    根节点指的是html标签，设置html标签的文字大小，其他的元素相关尺寸设置用rem，这样，
+    所有元素都有了统一的参照标准，改变html文字的大小，就会改变所有元素用rem设置的尺寸大小。
+
+-->
+<div class="float_layout">
+    <a href="#">111</a>
+    <a href="#">2222</a>
+    <a href="#">44444</a>
+    <a href="#">555555</a>
+</div>
+<div class="responsive_layout">
+    <div>111</div>
+    <div>2222</div>
+    <div>44444</div>
+    <div>555555</div>
+</div>
+<div class="em15">em15</div>
+<div class="em20">em20</div>
+<div class="rem15">rem15</div>
+<div class="rem20">rem20</div>
+</body>
+</html>

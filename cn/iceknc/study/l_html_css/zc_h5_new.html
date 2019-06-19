@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5新增标签</title>
+</head>
+<body>
+<!--
+新增语义标签
+    1、<header> 页面头部、页眉
+    2、<nav> 页面导航
+    3、<article> 一篇文章
+    4、<section> 文章中的章节
+    5、<aside> 侧边栏
+    6、<footer> 页面底部、页脚
+
+    音频视频
+        1、<audio>
+        2、<video>
+
+PC端兼容h5的新标签的方法，在页面中引入以下js文件:
+
+<script type="text/javascript" src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+
+HTML5 新增表单控件
+
+新增类型：网址 邮箱 日期 时间 星期 数量 范围 电话 颜色 搜索
+    <label>网址:</label><input type="url" name="" required><br><br>
+    <label>邮箱:</label><input type="email" name="" required><br><br>
+    <label>日期:</label><input type="date" name=""><br><br>
+    <label>时间:</label><input type="time" name=""><br><br>
+    <label>星期:</label><input type="week" name=""><br><br>
+    <label>数量:</label><input type="number" name=""> <br><br>
+    <label>范围:</label><input type="range" name=""><br><br>
+    <label>电话:</label><input type="tel" name=""><br><br>
+    <label>颜色:</label><input type="color" name=""><br><br>
+    <label>搜索:</label><input type="search" name=""><br><br>
+
+新增常用表单控件属性：
+1、placeholder 设置文本框默认提示文字
+2、autofocus 自动获得焦点
+3、autocomplete 联想关键词
+-->
+
+<form>
+    <label>网址:</label><input type="url" name="" required placeholder="laowang@xxx.com" autofocus autocomplete="off"><br><br>
+    <label>邮箱:</label><input type="email" name="" required><br><br>
+    <label>日期:</label><input type="date" name="" autofocus><br><br>
+    <label>时间:</label><input type="time" name=""><br><br>
+    <label>星期:</label><input type="week" name="" autofocus><br><br>
+    <label>数量:</label><input type="number" name=""> <br><br>
+    <label>范围:</label><input type="range" name=""><br><br>
+    <label>电话:</label><input type="tel" name=""><br><br>
+    <label>颜色:</label><input type="color" name=""><br><br>
+    <label>搜索:</label><input type="search" name=""><br><br>
+</form>
+</body>
+</html>

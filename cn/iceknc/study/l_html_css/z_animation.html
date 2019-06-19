@@ -98,7 +98,30 @@
             text-align: center;
         }
 
+        @keyframes walking_anim {
+            from {
+                left: 0px;
+            }
+            to {
+                left: -960px;
+            }
+        }
 
+        .walking {
+            width: 120px;
+            height: 180px;
+            border: 1px solid #ddd;
+            margin: 50px auto 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .walking img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: walking_anim 1s steps(8) infinite;
+        }
     </STYLE>
 </head>
 <body>
@@ -128,6 +151,10 @@ CSS3 animation动画
     <div></div>
     <div></div>
     <p>loading...</p>
+</div>
+
+<div class="walking">
+    <img src="images/walking.png">
 </div>
 </body>
 </html>
