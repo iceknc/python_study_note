@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+    <link rel="stylesheet" type="text/css" href='css/main.css' id="link01">
+    <script type="text/javascript">
+        //函数的定义
+        function fnMyAlert() {
+            alert('hello world!');
+        }
+
+        //函数调用执行
+        // fnMyAlert();
+
+        function fnChange() {
+            var oDiv = document.getElementById('div1');
+            oDiv.style.color = "red";
+            oDiv.style.fontSize = "30px";
+        }
+
+        function fnVarMyAlert(str) {
+            alert(str);
+        }
+
+        function add(a, b) {
+            var result = a + b;
+            return result;
+            alert("add finish");
+        }
+
+        window.onload = function () {
+            var oBtn = document.getElementById('btn');
+
+            //不能写括号，写了会执行函数
+            oBtn.onclick = fnChange1;
+
+            function fnChange1() {
+                var oDiv = document.getElementById('div1');
+                oDiv.style.color = "blue";
+                oDiv.style.fontSize = "50px";
+            }
+
+            document.getElementById('btn1').onclick = function () {
+                var oDiv = document.getElementById('div1');
+                oDiv.style.color = "yellow";
+                oDiv.style.fontSize = "70px";
+            };
+
+            document.getElementById('skin1').onclick = function () {
+                document.getElementById('link01').href = 'css/skin01.css';
+            };
+
+            document.getElementById('skin2').onclick = function () {
+                document.getElementById('link01').href = 'css/skin02.css';
+            };
+
+            document.getElementById('var').onclick = function () {
+                fnVarMyAlert("有参数的函数")
+            };
+
+            document.getElementById('return').onclick = function () {
+                fnVarMyAlert(add(9, 10))
+            };
+
+        }
+    </script>
+</head>
+<body>
+<!--
+函数定义与执行
+    <script type="text/javascript">
+        // 函数定义
+        function fnAlert(){
+            alert('hello!');
+        }
+        // 函数执行
+        fnAlert();
+    </script>
+
+变量与函数预解析
+    JavaScript解析过程分为两个阶段，先是编译阶段，然后执行阶段，在编译阶段会将function定义的函数提前，
+    并且将var定义的变量声明提前，将它赋值为undefined。
+
+    <script type="text/javascript">
+        fnAlert();       // 弹出 hello！
+        alert(iNum);  // 弹出 undefined
+        function fnAlert(){
+            alert('hello!');
+        }
+        var iNum = 123;
+
+匿名函数
+    定义的函数可以不给名称，这个叫做匿名函数，可以将匿名函数直接赋值给元素绑定的事件来完成匿名函数的调用。
+
+函数'return'关键字
+    函数中'return'关键字的作用：
+        1、返回函数执行的结果
+        2、结束函数的运行
+        3、阻止默认行为
+</script>
+-->
+<div id="div1" onclick="fnMyAlert()">这是一个div元素</div>
+<input type="button" name="" value="改变div" onclick="fnChange()">
+<input type="button" name="" value="提取行间事件 改变div" id="btn">
+<input type="button" name="" value="匿名函数提取行间事件 改变div" id="btn1">
+<input type="button" name="" value="皮肤1" id="skin1">
+<input type="button" name="" value="皮肤2" id="skin2">
+<input type="button" name="" value="传参" id="var">
+<input type="button" name="" value="return" id="return">
+</body>
+</html>

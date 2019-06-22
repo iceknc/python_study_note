@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作符</title>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var oInput01 = document.getElementById('add1');
+            var oInput02 = document.getElementById('add2');
+            document.getElementById('add').onclick = function () {
+                var iVal01 = parseInt(oInput01.value);
+                var iVal02 = parseInt(oInput02.value);
+
+                alert(iVal01 + iVal02);
+            };
+
+            document.getElementById('remainder').onclick = function () {
+                var iNum01 = 11;
+                var iNum02 = 2;
+                alert('11%2=' + iNum01 % iNum02);  // 弹出1
+
+
+                var iNum03 = 0;
+                var iNum04 = 10;
+                alert('0%10' + iNum03 % iNum04);  // 弹出0
+            };
+
+            document.getElementById('assignment').onclick = function () {
+                var iNum01 = 12;
+
+                iNum01 += 2;
+                alert('12+=2 --> ' + iNum01); // 弹出14
+
+                iNum01 -= 5;
+                alert('14-=5 --> ' + iNum01);
+
+                iNum01 *= 2;
+                alert('9*=2 --> ' + iNum01);
+
+                iNum01 /= 2;
+                alert('18/=2 --> ' + iNum01);
+
+                iNum01 %= 2;
+                alert('9%=2 --> ' + iNum01);
+
+                iNum01++;
+                alert('1++ --> ' + iNum01);
+            };
+
+            document.getElementById('condition').onclick = function () {
+                var iNum01 = 2;
+                var sNum01 = '2';
+
+                //用“==” 弹出相等
+                if (iNum01 == sNum01) {
+                    alert('2==\'2\' true');
+                } else {
+                    alert('2==\'2\' false');
+                }
+
+                if (iNum01 === sNum01) {
+                    alert('2===\'2\' true');
+                } else {
+                    alert('2===\'2\' true');
+                }
+
+                if (3 != 4) {
+                    alert(true);
+                } else {
+                    alert(false);
+                }
+
+                // 将逻辑运算的结果取反，比如运算是true，取反后就是false
+                if (!4 > 3) {
+                    alert('大于')
+                } else {
+                    alert('不大于')
+                }
+                // 多个条件运算，都是true，最终结果才是true
+                if (4 > 3 && 5 > 6) {
+                    alert('都是大于')
+                } else {
+                    alert('不是都大于')
+                }
+
+                // 多个条件运算中只要有一个是true，最终结果就是true
+                if (4 > 3 || 5 > 6) {
+                    alert('只有部分大于')
+                } else {
+                    alert('都不大于')
+                }
+
+                var number = iNum01 % 2;
+                switch (number) {
+                    case 0:
+                        alert(iNum01 + " % 2 = 0");
+                        break;
+                    case 1:
+                        alert(iNum01 + " % 2 = 1");
+                        break;
+                    default:
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+<!--
+条件语句
+通过条件来控制程序的走向，就需要用到条件语句。
+    运算符
+        1、算术运算符： +(加)、 -(减)、 *(乘)、 /(除)、 %(求余)
+        2、赋值运算符：=、 +=、 -=、 *=、 /=、 %=
+        3、条件运算符：==、===、>、>=、<、<=、!=、&&(而且)、||(或者)、!(否)
+            双等号==：
+                （1）如果两个值类型相同，再进行三个等号(===)的比较
+                （2）如果两个值类型不同，也有可能相等，需根据以下规则进行类型转换在比较：
+                    1）如果一个是null，一个是undefined，那么相等
+                    2）如果一个是字符串，一个是数值，把字符串转换成数值之后再进行比较
+            三等号===:
+                （1）如果类型不同，就一定不相等
+                （2）如果两个都是数值，并且是同一个值，那么相等；如果其中至少一个是NaN，那么不相等。（判断一个值是否是NaN，只能使用isNaN( ) 来判断）
+                （3）如果两个都是字符串，每个位置的字符都一样，那么相等，否则不相等。
+                （4）如果两个值都是true，或是false，那么相等
+                （5）如果两个值都引用同一个对象或是函数，那么相等，否则不相等
+                （6）如果两个值都是null，或是undefined，那么相等
+-->
+
+<input type="text" name="" id="add1"> ＋
+<input type="text" name="" id="add2">
+
+<input type="button" name="" value="相加" id="add">
+<input type="button" name="" value="求余" id="remainder">
+<input type="button" name="" value="赋值" id="assignment">
+<input type="button" name="" value="条件运算" id="condition">
+</body>
+</html>

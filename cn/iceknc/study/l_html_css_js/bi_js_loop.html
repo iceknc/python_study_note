@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环</title>
+    <script type="text/javascript">
+        var aList = [1, 2, 3, 4, 4, 3, 2, 1, 2, 3, 4, 5, 6, 5, 5, 3, 3, 4, 2, 1];
+
+        var aList2 = [];
+
+        for (var i = 0; i < aList.length; i++) {
+            if (aList.indexOf(aList[i]) == i) {
+                aList2.push(aList[i]);
+            }
+        }
+        alert(aList2);
+
+        window.onload = function () {
+            var aLi = document.getElementsByTagName('li');
+            // aLi.style.backgroundColor = 'gold'; // 出错！不能同时设置多个li
+            alert(aLi.length);
+
+            var length = aLi.length;
+            for (var i = 0; i < length; i++) {
+                if (i % 2 === 0) {
+                    aLi[i].style.backgroundColor = 'gold';
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<!--
+for循环
+    for(var i=0;i<len;i++)
+    {
+        ......
+    }
+
+while循环
+    var i=0;
+
+    while(i<8){
+        ......
+        i++;
+    }
+-->
+
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+</html>
