@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串</title>
+    <script type="text/javascript">
+        var iNum01 = 12;
+        var iNum02 = 24;
+        var sNum03 = '12';
+        var sAbc = 'abc';
+        alert(iNum01 + iNum02);  //弹出36
+        alert(iNum01 + sNum03);  //弹出1212 数字和字符串相加等同于字符串相加
+        alert(sNum03 + sAbc);     // 弹出12abc
+
+        var sNum01 = '12';
+        var sNum02 = '24';
+        var sNum031 = '12.32';
+        alert(sNum01 + sNum02);  //弹出1224
+        alert(parseInt(sNum01) + parseInt(sNum02));  //弹出36
+        alert(sNum031);   //弹出数字12 将字符串小数转化为数字整数
+
+        alert(parseFloat(sNum031));
+
+        var sTr = '2017-4-22';
+        var aRr = sTr.split("-");
+        var aRr2 = sTr.split("");
+
+        alert(aRr);  //弹出['2017','4','2']
+        alert(aRr2);  //弹出['2','0','1','7','-','4','-','2','2']
+
+        var sChar = sTr.charAt(0);
+        alert(sChar); //弹出2
+
+        var iNum = sTr.indexOf("1");
+        alert(iNum); //弹出2
+
+        var sTr2 = sTr.substring(3, 5);
+        var sTr3 = sTr.substring(1);
+
+        alert(sTr2); //弹出 7-
+        alert(sTr3); //弹出 017-4-22
+
+        //直接转换 parseInt() 与 parseFloat()
+        alert('12' + 7); //弹出127
+        alert(parseInt('12') + 7);  //弹出19
+        alert(parseInt(5.6));  // 弹出5
+        alert('5.6' + 2.3);  // 弹出5.62.3
+        alert(parseFloat('5.6') + 2.3);  // 弹出7.8999999999999995
+        alert(0.1 + 0.2); //弹出 0.3000000000000004
+        alert((0.1 * 100 + 0.2 * 100) / 100); //弹出0.3
+        alert((parseFloat('5.6') * 100 + 2.3 * 100) / 100); //弹出7.9
+
+        //隐式转换 “==” 和 “-”
+        if ('3' == 3) { // 弹出'相等'
+            alert('相等');
+        }
+
+        alert('10' - 3);  // 弹出7
+
+        //NaN 和 isNaN
+        alert(parseInt('123abc'));  // 弹出123
+        alert(parseInt('abc123'));  // 弹出NaN
+    </script>
+</head>
+<body>
+<!--
+字符串处理方法
+    1、字符串合并操作：“ + ”
+    2、parseInt() 将数字字符串转化为整数
+    3、parseFloat() 将数字字符串转化为小数
+    4、split() 把一个字符串分隔成字符串组成的数组
+    5、charAt() 获取字符串中的某一个字符
+    6、indexOf() 查找字符串是否含有某字符
+    7、substring() 截取字符串 用法： substring(start,end)（不包括end）
+    8、toUpperCase() 字符串转大写
+    9、toLowerCase() 字符串转小写
+
+    字符串反转
+        var str = 'asdfj12jlsdkf098';
+        var str2 = str.split('').reverse().join('');
+
+类型转换
+    1、直接转换 parseInt() 与 parseFloat()
+    2、隐式转换 “==” 和 “-”
+    3、NaN 和 isNaN
+-->
+</body>
+</html>

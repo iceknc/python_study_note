@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+    <script type="text/javascript">
+        //全局变量
+        var a = 12;
+
+        function myalert() {
+            //局部变量
+            var b = 23;
+            alert(a);
+            alert(b);
+        }
+
+        myalert(); //弹出12和23
+        alert(a);  //弹出12
+        alert(b);  //出错
+    </script>
+</head>
+<body>
+
+</body>
+</html>
