@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特殊效果</title>
+    <style type="text/css">
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btn').click(function () {
+
+                /*$('.box').fadeIn(1000,function(){
+                    alert('动画完了！');
+                });
+                */
+
+                /*$('.box').fadeToggle(1000,function(){
+                    alert('动画完了！');
+                });
+                */
+
+                // $('.box').show();
+
+                //$('.box').toggle();
+
+                //$('.box').slideDown();
+
+                $('.box').fadeToggle(1000, function () {
+                    alert('动画完了')
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+<!--
+jquery特殊效果
+    fadeIn() 淡入
+        $btn.click(function(){
+            $('#div1').fadeIn(1000,'swing',function(){
+            alert('done!');
+        });
+    });
+
+    fadeOut() 淡出
+    fadeToggle() 切换淡入淡出
+    hide() 隐藏元素
+    show() 显示元素
+    toggle() 切换元素的可见状态
+slideDown() 向下展开
+slideUp() 向上卷起
+slideToggle() 依次展开或卷起某个元素
+
+
+-->
+<input type="button" name="" value="动画" id="btn">
+<div class="box"></div>
+</body>
+</html>

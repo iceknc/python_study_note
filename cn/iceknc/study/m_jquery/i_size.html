@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尺寸相关</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $div = $('.box');
+            // 盒子内容的尺寸
+            console.log('width:' + $div.width());
+            console.log('height:' + $div.height());
+            // 盒子内容加上padding的尺寸
+            console.log('innerWidth:' + $div.innerWidth());
+            console.log('innerHeight:' + $div.innerHeight());
+            //盒子的真实尺寸，内容尺寸+padding+border
+            console.log('outerWidth:' + $div.outerWidth());
+            console.log('outerHeight:' + $div.outerHeight());
+            // 盒子的真实尺寸再加上margin
+            console.log('outerWidth(true):' + $div.outerWidth(true));
+            console.log('outerHeight(true):' + $div.outerHeight(true));
+
+            $div.click(function () {
+                var oPos = $div.offset();
+                document.title = oPos.left + "|" + oPos.top;
+            });
+
+            console.log('可视区的宽度:' + $(window).width());
+
+            console.log('可视区的高度:' + $(window).height());
+
+            console.log('文档的宽度:' + $(document).width());
+
+            console.log('文档的高度:' + $(document).height());
+        })
+    </script>
+    <style type="text/css">
+        .box {
+            width: 300px;
+            height: 200px;
+            padding: 21px;
+            border: 3px solid #000;
+            margin: 25px;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+<!--
+1、获取和设置元素的尺寸
+    width()、height()    获取元素width和height
+    innerWidth()、innerHeight()  包括padding的width和height
+    outerWidth()、outerHeight()  包括padding和border的width和height
+    outerWidth(true)、outerHeight(true)   包括padding和border以及margin的width和height
+
+2、获取元素相对页面的绝对位置
+    offset()
+
+3、获取浏览器可视区宽度高度
+    $(window).width();
+    $(window).height();
+
+4、获取页面文档的宽度高度
+    $(document).width();
+    $(document).height();
+
+5、获取页面滚动距离
+    $(document).scrollTop();
+    $(document).scrollLeft();
+
+6、页面滚动事件
+    $(window).scroll(function(){
+        ......
+    })
+
+
+-->
+<div class="box "></div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>hello</p>
+<p>hello</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>hello</p>
+<p>hello</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>hello</p>
+<p>hello</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>hello</p>
+<p>hello</p>
+</body>
+</html>

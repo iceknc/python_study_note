@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $div = $('#box');
+            // 读取属性值
+            var sTr = $div.css('fontSize');
+            alert(sTr);
+            // 写属性值
+            $div.css({'color': 'red', 'backgroundColor': 'pink', 'fontSize': '20px'});
+
+            /*
+            原生js无法读取行间没有定义的css属性值
+            var oDiv = document.getElementById('box');
+            alert(oDiv.style.fontSize);
+            */
+
+            var $div1 = $('.box');
+
+			// 在原来样式名的基础上加上“big”的样式名
+			$div1.addClass('big');
+
+			// 在原来样式名的基础上去掉“red”的样式名
+			$div1.removeClass('red');
+        })
+    </script>
+
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+        }
+
+        .big {
+            font-size: 30px;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+jquery样式操作
+    同一个函数完成取值和赋值
+
+    操作行间样式
+    // 获取div的样式
+    $("div").css("width");
+    $("div").css("color");
+
+    //设置div的样式
+    $("div").css("width","30px");
+    $("div").css("height","30px");
+    $("div").css({fontSize:"30px",color:"red"});
+
+    特别注意
+        选择器获取的多个元素，获取信息获取的是第一个，比如：$("div").css("width")，获取的是第一个div的width。
+
+    操作样式类名
+        $("#div1").addClass("divClass2") //为id为div1的对象追加样式divClass2
+        $("#div1").removeClass("divClass")  //移除id为div1的对象的class名为divClass的样式
+        $("#div1").removeClass("divClass divClass2") //移除多个样式
+        $("#div1").toggleClass("anotherClass") //重复切换anotherClass样式
+-->
+
+<div id="box">div元素</div>
+
+<div class="box red">div元素</div>
+</body>
+</html>
