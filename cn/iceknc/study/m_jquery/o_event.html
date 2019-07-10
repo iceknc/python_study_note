@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 在获得焦点的时候做什么事情
+            /*$('#input01').focus(function(){
+                alert('获得焦点')
+            })*/
+
+            //focus 一般用来让input元素开始就获取焦点，只能是一个元素获得焦点
+            $('#input01').focus();
+            $('#input01').blur(function () {
+                // 获取input元素的value值用 val()
+                var sVal = $(this).val();
+                alert(sVal);
+            });
+            $('#form1').submit(function () {
+                //alert('提交');
+                // 阻止默认的提交行为
+                return false;
+            })
+        })
+    </script>
+</head>
+<body>
+<!--
+jquery事件
+    事件函数列表：
+        blur() 元素失去焦点
+        focus() 元素获得焦点
+        click() 鼠标单击
+        mouseover() 鼠标进入（进入子元素也触发）
+        mouseout() 鼠标离开（离开子元素也触发）
+        mouseenter() 鼠标进入（进入子元素不触发）
+        mouseleave() 鼠标离开（离开子元素不触发）
+        hover() 同时为mouseenter和mouseleave事件指定处理函数
+        ready() DOM加载完成
+        resize() 浏览器窗口的大小发生改变
+        scroll() 滚动条的位置发生变化
+        submit() 用户递交表单
+
+    绑定事件的其他方式
+        $(function(){
+            $('#div1').bind('mouseover click', function(event) {
+                alert($(this).html());
+            });
+        });
+
+    取消绑定事件
+        $(function(){
+            $('#div1').bind('mouseover click', function(event) {
+                alert($(this).html());
+                // $(this).unbind();
+                $(this).unbind('mouseover');
+            });
+        });
+
+
+-->
+
+<form id="form1" action="http://www.baidu.com">
+    <input type="text" name="dat01" id="input01">
+    <input type="text" name="dat02" id="input02">
+    <input type="submit" name="" value="提交" id="sub">
+</form>
+</body>
+</html>

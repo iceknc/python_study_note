@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //事件委托，将li要发生的事件委托给li的父级
+            $('.list').delegate('li', 'click', function () {
+                //$(this) 指的是委托的子元素
+                $(this).css({'backgroundColor': 'red'});
+            });
+
+            var $li = $('<li>9</li>');
+            $('.list').append($li);
+        })
+    </script>
+    <style type="text/css">
+        .list {
+            background-color: gold;
+            list-style: none;
+            padding: 10px;
+        }
+
+        .list li {
+            height: 30px;
+            background-color: green;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<!--
+事件委托
+    事件委托就是利用冒泡的原理，把事件加到父级上，通过判断事件来源的子集，执行相应的操作，事件委托首先
+    可以极大减少事件绑定次数，提高性能；其次可以让新加入的子元素也可以拥有相同的操作。
+
+    一般绑定事件的写法
+        $(function(){
+            $ali = $('#list li');
+            $ali.click(function() {
+                $(this).css({background:'red'});
+            });
+        })
+        ...
+        <ul id="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+
+    事件委托的写法
+        $(function(){
+            $list = $('#list');
+            $list.delegate('li', 'click', function() {
+                $(this).css({background:'red'});
+            });
+        })
+        ...
+        <ul id="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+-->
+
+<ul class="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+</ul>
+</body>
+</html>

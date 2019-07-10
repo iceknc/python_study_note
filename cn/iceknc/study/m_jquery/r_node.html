@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $div1 = $('#div1');
+            // 通过html的字符串的方式添加节点性能最高
+            $div1.html($div1.html() + '<a href="https://www.baidu.com">百度链接</a>');
+
+            // 新建一个带有属性的a元素，把它赋值给$a
+            $a = $('<a href="https://www.taobao.com">淘宝链接</a>');
+            // 新建一个空的a元素
+            $a2 = $('<a>');
+
+            $p = $('<p>这是一个p元素</p>');
+            $h2 = $('<h2>这是一个h2</h2>');
+            $h3 = $('<h3>这是一个h3</h3>');
+
+            // 父元素内的后面放入子元素
+            $div1.append($a);
+
+            //子元素放入到父元素内部的后面
+            $a.appendTo($div1);
+            $div1.append($a2);
+
+            // 父元素内的前面放入子元素
+            $div1.prepend($p);
+
+            //子元素放入到父元素内部的前面
+            $p.prependTo($div1);
+
+            $div1.after($h2);
+            $h2.insertAfter($div1);
+
+            $div1.before($h3);
+            $h3.insertBefore($div1);
+        })
+    </script>
+</head>
+<body>
+<!--
+jquery元素节点操作
+    创建节点
+        var $div = $('<div>');
+        var $div2 = $('<div>这是一个div元素</div>');
+
+    插入节点
+        1、append()和appendTo()：在现存元素的内部，从后面插入元素
+            var $span = $('<span>这是一个span元素</span>');
+            $('#div1').append($span);
+            ......
+            <div id="div1"></div>
+        2、prepend()和prependTo()：在现存元素的内部，从前面插入元素
+        3、after()和insertAfter()：在现存元素的外部，从后面插入元素
+        4、before()和insertBefore()：在现存元素的外部，从前面插入元素
+
+    删除节点
+        $('#div1').remove();
+-->
+
+<div id="div1">
+    <h1>这是一个H1元素</h1>
+</div>
+</body>
+</html>

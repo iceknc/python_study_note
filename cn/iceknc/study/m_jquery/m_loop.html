@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $li = $('.list li');
+            //$li.css({'backgroundColor':'gold'});
+            $li.each(function (a) {
+                //alert(a);
+                //alert( $(this).html() );
+                //alert($(this).index());
+                if ($(this).index() % 2 == 0) {
+                    $(this).css({'backgroundColor': 'gold'});
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<!--
+jquery循环
+    对jquery选择的对象集合分别进行操作，需要用到jquery循环操作，此时可以用对象上的each方法：
+        $(function(){
+            $('.list li').each(function(i){
+                $(this).html(i);
+            })
+        })
+        ......
+        <ul class="list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+-->
+<ul class="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+</ul>
+</body>
+</html>
