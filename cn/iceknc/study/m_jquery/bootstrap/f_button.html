@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按钮</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+<!--
+bootstrap 按钮
+    1、btn 声明按钮
+    2、btn-default 默认按钮样式
+    3、btn-primay
+    4、btn-success
+    5、btn-info
+    6、btn-warning
+    7、btn-danger
+    8、btn-link
+    9、btn-lg
+    10、btn-md
+    11、btn-xs
+    12、btn-block 宽度是父级宽100%的按钮
+    13、active
+    14、disabled
+    15、btn-group 定义按钮组
+-->
+
+<div class="container">
+    <div class="row">
+        <h2>按钮</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <input type="button" name="" value="按钮" class="btn btn-primary">
+
+        <a href="#" class="btn btn-success">a标签按钮</a>
+        <a href="#" class="btn btn-info">a标签按钮</a>
+        <a href="#" class="btn btn-warning">a标签按钮</a>
+        <a href="#" class="btn btn-danger">a标签按钮</a>
+        <a href="#" class="btn btn-link">a标签按钮</a>
+
+        <a href="#" class="btn btn-danger active">a标签按钮</a>
+
+        <a href="#" class="btn btn-danger disabled">a标签按钮</a>
+
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <a href="#" class="btn btn-success btn-lg">大按钮</a>
+        <a href="#" class="btn btn-info btn-md">中等按钮</a>
+        <a href="#" class="btn btn-warning btn-xs">小按钮</a>
+        <a href="#" class="btn btn-danger">一般的按钮</a>
+    </div>
+
+    <br>
+    <br>
+    <div class="row">
+        <a href="#" class="btn btn-primary btn-block">宽度是100%的按钮</a>
+    </div>
+
+    <br>
+    <br>
+    <div class="row">
+        <div class="btn-group">
+            <a href="#" class="btn btn-primary">步骤一</a>
+            <a href="#" class="btn btn-primary">步骤二</a>
+            <a href="#" class="btn btn-default">步骤三</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-primary">步骤一</a>
+            <a href="#" class="btn btn-primary">步骤二</a>
+            <a href="#" class="btn btn-default">步骤三</a>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="row">
+        <div class="btn-group btn-group-justified">
+            <div class="btn-group">
+                <input type="button" name="" value="步骤一" class="btn btn-primary">
+            </div>
+            <div class="btn-group">
+                <input type="button" name="" value="步骤二" class="btn btn-primary">
+            </div>
+            <div class="btn-group">
+                <input type="button" name="" value="步骤三" class="btn btn-default">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

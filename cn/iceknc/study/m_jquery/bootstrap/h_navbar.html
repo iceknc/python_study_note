@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+<!--
+bootstrap 导航条
+    1、navbar 声明导航条
+    2、navbar-default 声明默认的导航条样式
+    3、navbar-inverse 声明反白的导航条样式
+    4、navbar-static-top 去掉导航条的圆角
+    5、navbar-fixed-top 固定到顶部的导航条
+    6、navbar-fixed-bottom 固定到底部的导航条
+    7、navbar-header 申明logo的容器
+    8、navbar-brand 针对logo等固定内容的样式
+    11、nav navbar-nav 定义导航条中的菜单
+    12、navbar-form 定义导航条中的表单
+    13、navbar-btn 定义导航条中的按钮
+    14、navbar-text 定义导航条中的文本
+    15、navbar-left 菜单靠左
+    16、navbar-right 菜单靠右
+-->
+<div class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <!-- 定义logo和切换小图标   -->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#mymenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="#" class="navbar-brand">LOGO</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="mymenu">
+            <!-- 定义菜单   -->
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">公司简介</a></li>
+                <li><a href="#">解决方案</a></li>
+            </ul>
+            <!-- 定义菜单里面的表单   -->
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" name="" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
