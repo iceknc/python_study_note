@@ -144,6 +144,23 @@ def calc_result():
                 else:
                     result[name] = 1
 
+                i = len(name)
+                if i == 2:
+                    if result.get("一个字的名字") is not None:
+                        result["一个字的名字"] += 1
+                    else:
+                        result["一个字的名字"] = 1
+                elif i == 3:
+                    if result.get("两个字的名字") is not None:
+                        result["两个字的名字"] += 1
+                    else:
+                        result["两个字的名字"] = 1
+                else:
+                    if result.get("其他类型的名字") is not None:
+                        result["其他类型的名字"] += 1
+                    else:
+                        result["其他类型的名字"] = 1
+
     sort_result = sorted(result.items(), key=lambda x: x[1], reverse=True)
     with open("E://download/data/result1.txt", "w+", encoding="utf-8") as  f:
         for item in sort_result:
