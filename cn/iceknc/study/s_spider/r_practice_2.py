@@ -153,6 +153,7 @@ def calc_result():
 
 if __name__ == "__main__":
     # 1.抓取数据  有几个数据需要手动下载  xpath匹配不太好写
+    # 具体可看文件对应的日期少了哪几个
     # spider()
 
     # 2.pdf 提取出文字 第三方库 pip install pdfminer3k
