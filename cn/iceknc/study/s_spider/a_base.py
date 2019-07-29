@@ -20,7 +20,10 @@
 """
 
 def main():
-    pass
+    encode = u"个人普通小汽车摇号指标配置结果".encode()
+    print(type(encode))
+    for i in range(len(encode)):
+        print(encode[i])
 
 
 if __name__ == "__main__":
