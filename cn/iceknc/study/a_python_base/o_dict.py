@@ -38,3 +38,23 @@ print(dict)
 for k in dict:
     print(k, end=" - ")
     print(dict[k])
+
+count_dict = {
+    'b': 2,
+    'h': 2,
+    'c': 5,
+    'e': 4,
+    'w': 3,
+    'q': 3,
+    'a': 7,
+}
+#按value从小到大排序
+a = sorted(count_dict.items(), key=lambda x: x[1])
+#按value从大到小排序
+a1 = sorted(count_dict.items(), key=lambda x: x[1], reverse=True)
+#按key从小到大排序
+a2 = sorted(count_dict.items(), key=lambda x: x[0])
+#按key从大到小排序
+a3 = sorted(count_dict.items(), key=lambda x: x[0], reverse=True)
+#切片取vlaue最大的3个
+a4 = a1[:3]
