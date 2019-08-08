@@ -6,8 +6,6 @@
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-class ItcastspiderPipeline(object):
+class SuningBookPipeline(object):
     def process_item(self, item, spider):
-        if spider.name == "itcast":
-            print(item)
         return item

@@ -4,10 +4,9 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+import logging
 
-
-class ItcastspiderPipeline(object):
+class TencentHrPipeline(object):
     def process_item(self, item, spider):
-        if spider.name == "itcast":
-            print(item)
+        logging.debug(item)
         return item

@@ -1,0 +1,602 @@
+2019-08-08 18:11:20 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: suning_book)
+2019-08-08 18:11:20 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.7.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17763-SP0
+2019-08-08 18:11:20 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'suning_book', 'LOG_FILE': './log.log', 'NEWSPIDER_MODULE': 'suning_book.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['suning_book.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'}
+2019-08-08 18:11:20 [scrapy.extensions.telnet] INFO: Telnet Password: 2b583797c61b6161
+2019-08-08 18:11:20 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-08 18:11:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-08 18:11:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-08 18:11:21 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-08-08 18:11:21 [scrapy.core.engine] INFO: Spider opened
+2019-08-08 18:11:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-08 18:11:21 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-08 18:11:21 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://book.suning.com/robots.txt> (referer: None)
+2019-08-08 18:11:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.suning.com/?safp=d488778a.homepage1.99345513004.47> (referer: None)
+2019-08-08 18:11:21 [root] DEBUG: https://list.suning.com/1-502325-0.html
+2019-08-08 18:11:21 [root] DEBUG: https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:11:21 [root] DEBUG: https://list.suning.com/1-502476-0.html
+2019-08-08 18:11:21 [root] DEBUG: https://list.suning.com/1-502298-0.html
+2019-08-08 18:11:21 [root] DEBUG: https://list.suning.com/1-502297-0.html
+2019-08-08 18:11:21 [root] DEBUG: https://list.suning.com/1-502316-0.html
+2019-08-08 18:11:21 [root] DEBUG: https://list.suning.com/0-502328-0.html
+2019-08-08 18:11:21 [root] DEBUG: https://list.suning.com/1-502315-0.html
+2019-08-08 18:11:21 [root] DEBUG: https://zjts.suning.com/
+2019-08-08 18:11:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/robots.txt> (referer: None)
+2019-08-08 18:11:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502476-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:11:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502316-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:11:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502315-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:11:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/0-502328-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:11:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502297-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:11:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502298-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:11:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502325-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:11:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-08-08 18:11:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3449,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 518964,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 9,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1.194836,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 8, 8, 10, 11, 22, 424238),
+ 'log_count/DEBUG': 19,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 10,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2019, 8, 8, 10, 11, 21, 229402)}
+2019-08-08 18:11:22 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-08-08 18:24:57 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: suning_book)
+2019-08-08 18:24:57 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.7.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17763-SP0
+2019-08-08 18:24:57 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'suning_book', 'LOG_FILE': './log.log', 'NEWSPIDER_MODULE': 'suning_book.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['suning_book.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'}
+2019-08-08 18:24:57 [scrapy.extensions.telnet] INFO: Telnet Password: 3b1c46070cc4e1d2
+2019-08-08 18:24:57 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-08 18:24:57 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-08 18:24:57 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-08 18:24:57 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-08-08 18:24:57 [scrapy.core.engine] INFO: Spider opened
+2019-08-08 18:24:57 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-08 18:24:57 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-08 18:24:57 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://book.suning.com/robots.txt> (referer: None)
+2019-08-08 18:24:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.suning.com/?safp=d488778a.homepage1.99345513004.47> (referer: None)
+2019-08-08 18:24:58 [root] DEBUG: https://list.suning.com/1-502325-0.html
+2019-08-08 18:24:58 [root] DEBUG: https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:24:58 [root] DEBUG: 舍弃地址：https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:24:58 [root] DEBUG: https://list.suning.com/1-502476-0.html
+2019-08-08 18:24:58 [root] DEBUG: https://list.suning.com/1-502298-0.html
+2019-08-08 18:24:58 [root] DEBUG: https://list.suning.com/1-502297-0.html
+2019-08-08 18:24:58 [root] DEBUG: https://list.suning.com/1-502316-0.html
+2019-08-08 18:24:58 [root] DEBUG: https://list.suning.com/0-502328-0.html
+2019-08-08 18:24:58 [root] DEBUG: https://list.suning.com/1-502315-0.html
+2019-08-08 18:24:58 [root] DEBUG: https://zjts.suning.com/
+2019-08-08 18:24:58 [root] DEBUG: 舍弃地址：https://zjts.suning.com/
+2019-08-08 18:24:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/robots.txt> (referer: None)
+2019-08-08 18:24:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502476-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:24:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502316-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:24:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502297-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:24:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502325-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:24:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502315-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:24:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/0-502328-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:24:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502298-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:24:59 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-08-08 18:24:59 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3449,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 519107,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 9,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1.318508,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 8, 8, 10, 24, 59, 47373),
+ 'log_count/DEBUG': 21,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 10,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2019, 8, 8, 10, 24, 57, 728865)}
+2019-08-08 18:24:59 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-08-08 18:25:45 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: suning_book)
+2019-08-08 18:25:45 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.7.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17763-SP0
+2019-08-08 18:25:45 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'suning_book', 'LOG_FILE': './log.log', 'NEWSPIDER_MODULE': 'suning_book.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['suning_book.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'}
+2019-08-08 18:25:45 [scrapy.extensions.telnet] INFO: Telnet Password: ee7ef732d3e3060e
+2019-08-08 18:25:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-08 18:25:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-08 18:25:45 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-08 18:25:45 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-08-08 18:25:45 [scrapy.core.engine] INFO: Spider opened
+2019-08-08 18:25:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-08 18:25:45 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-08 18:25:46 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://book.suning.com/robots.txt> (referer: None)
+2019-08-08 18:25:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.suning.com/?safp=d488778a.homepage1.99345513004.47> (referer: None)
+2019-08-08 18:25:46 [root] DEBUG: https://list.suning.com/1-502325-0.html
+2019-08-08 18:25:46 [root] DEBUG: https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:25:46 [root] DEBUG: 舍弃地址：https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:25:46 [root] DEBUG: https://list.suning.com/1-502476-0.html
+2019-08-08 18:25:46 [root] DEBUG: https://list.suning.com/1-502298-0.html
+2019-08-08 18:25:46 [root] DEBUG: https://list.suning.com/1-502297-0.html
+2019-08-08 18:25:46 [root] DEBUG: https://list.suning.com/1-502316-0.html
+2019-08-08 18:25:46 [root] DEBUG: https://list.suning.com/0-502328-0.html
+2019-08-08 18:25:46 [root] DEBUG: https://list.suning.com/1-502315-0.html
+2019-08-08 18:25:46 [root] DEBUG: https://zjts.suning.com/
+2019-08-08 18:25:46 [root] DEBUG: 舍弃地址：https://zjts.suning.com/
+2019-08-08 18:25:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/robots.txt> (referer: None)
+2019-08-08 18:25:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502476-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:25:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502316-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:25:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502325-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:25:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502315-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:25:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/0-502328-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:25:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502297-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:25:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502298-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:25:47 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-08-08 18:25:47 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3449,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 519188,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 9,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1.229696,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 8, 8, 10, 25, 47, 96886),
+ 'log_count/DEBUG': 21,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 10,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2019, 8, 8, 10, 25, 45, 867190)}
+2019-08-08 18:25:47 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-08-08 18:27:35 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: suning_book)
+2019-08-08 18:27:35 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.7.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17763-SP0
+2019-08-08 18:27:35 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'suning_book', 'LOG_FILE': './log.log', 'NEWSPIDER_MODULE': 'suning_book.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['suning_book.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'}
+2019-08-08 18:27:35 [scrapy.extensions.telnet] INFO: Telnet Password: 0ff25d2e730576cd
+2019-08-08 18:27:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-08 18:27:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-08 18:27:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-08 18:27:35 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-08-08 18:27:35 [scrapy.core.engine] INFO: Spider opened
+2019-08-08 18:27:35 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-08 18:27:35 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-08 18:27:35 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://book.suning.com/robots.txt> (referer: None)
+2019-08-08 18:27:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.suning.com/?safp=d488778a.homepage1.99345513004.47> (referer: None)
+2019-08-08 18:27:36 [root] DEBUG: https://list.suning.com/1-502325-0.html
+2019-08-08 18:27:36 [root] DEBUG: https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:27:36 [root] DEBUG: 舍弃地址：https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:27:36 [root] DEBUG: https://list.suning.com/1-502476-0.html
+2019-08-08 18:27:36 [root] DEBUG: https://list.suning.com/1-502298-0.html
+2019-08-08 18:27:36 [root] DEBUG: https://list.suning.com/1-502297-0.html
+2019-08-08 18:27:36 [root] DEBUG: https://list.suning.com/1-502316-0.html
+2019-08-08 18:27:36 [root] DEBUG: https://list.suning.com/0-502328-0.html
+2019-08-08 18:27:36 [root] DEBUG: https://list.suning.com/1-502315-0.html
+2019-08-08 18:27:36 [root] DEBUG: https://zjts.suning.com/
+2019-08-08 18:27:36 [root] DEBUG: 舍弃地址：https://zjts.suning.com/
+2019-08-08 18:27:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/robots.txt> (referer: None)
+2019-08-08 18:27:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502315-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:27:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502476-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:27:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502315-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+Traceback (most recent call last):
+  File "c:\develop\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\Python\workspace\study\cn\iceknc\study\u_scrapy\suning_book\suning_book\spiders\all_book.py", line 23, in parse_class
+    print(response.url + "  --> " +len(wrap_list))
+TypeError: can only concatenate str (not "int") to str
+2019-08-08 18:27:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502316-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:27:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502476-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+Traceback (most recent call last):
+  File "c:\develop\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\Python\workspace\study\cn\iceknc\study\u_scrapy\suning_book\suning_book\spiders\all_book.py", line 23, in parse_class
+    print(response.url + "  --> " +len(wrap_list))
+TypeError: can only concatenate str (not "int") to str
+2019-08-08 18:27:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502325-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:27:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502297-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:27:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/0-502328-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:27:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502298-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:27:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502316-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+Traceback (most recent call last):
+  File "c:\develop\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\Python\workspace\study\cn\iceknc\study\u_scrapy\suning_book\suning_book\spiders\all_book.py", line 23, in parse_class
+    print(response.url + "  --> " +len(wrap_list))
+TypeError: can only concatenate str (not "int") to str
+2019-08-08 18:27:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502325-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+Traceback (most recent call last):
+  File "c:\develop\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\Python\workspace\study\cn\iceknc\study\u_scrapy\suning_book\suning_book\spiders\all_book.py", line 23, in parse_class
+    print(response.url + "  --> " +len(wrap_list))
+TypeError: can only concatenate str (not "int") to str
+2019-08-08 18:27:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502297-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+Traceback (most recent call last):
+  File "c:\develop\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\Python\workspace\study\cn\iceknc\study\u_scrapy\suning_book\suning_book\spiders\all_book.py", line 23, in parse_class
+    print(response.url + "  --> " +len(wrap_list))
+TypeError: can only concatenate str (not "int") to str
+2019-08-08 18:27:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/0-502328-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+Traceback (most recent call last):
+  File "c:\develop\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\Python\workspace\study\cn\iceknc\study\u_scrapy\suning_book\suning_book\spiders\all_book.py", line 23, in parse_class
+    print(response.url + "  --> " +len(wrap_list))
+TypeError: can only concatenate str (not "int") to str
+2019-08-08 18:27:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://list.suning.com/1-502298-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+Traceback (most recent call last):
+  File "c:\develop\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\Python\workspace\study\cn\iceknc\study\u_scrapy\suning_book\suning_book\spiders\all_book.py", line 23, in parse_class
+    print(response.url + "  --> " +len(wrap_list))
+TypeError: can only concatenate str (not "int") to str
+2019-08-08 18:27:36 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-08-08 18:27:36 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3449,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 519418,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 9,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1.305511,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 8, 8, 10, 27, 36, 951207),
+ 'log_count/DEBUG': 21,
+ 'log_count/ERROR': 7,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 10,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'spider_exceptions/TypeError': 7,
+ 'start_time': datetime.datetime(2019, 8, 8, 10, 27, 35, 645696)}
+2019-08-08 18:27:36 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-08-08 18:28:24 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: suning_book)
+2019-08-08 18:28:24 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.7.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17763-SP0
+2019-08-08 18:28:24 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'suning_book', 'LOG_FILE': './log.log', 'NEWSPIDER_MODULE': 'suning_book.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['suning_book.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'}
+2019-08-08 18:28:24 [scrapy.extensions.telnet] INFO: Telnet Password: ef6e8471efb00895
+2019-08-08 18:28:24 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-08 18:28:24 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-08 18:28:24 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-08 18:28:24 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-08-08 18:28:24 [scrapy.core.engine] INFO: Spider opened
+2019-08-08 18:28:24 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-08 18:28:24 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-08 18:28:24 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://book.suning.com/robots.txt> (referer: None)
+2019-08-08 18:28:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.suning.com/?safp=d488778a.homepage1.99345513004.47> (referer: None)
+2019-08-08 18:28:25 [root] DEBUG: https://list.suning.com/1-502325-0.html
+2019-08-08 18:28:25 [root] DEBUG: https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:28:25 [root] DEBUG: 舍弃地址：https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:28:25 [root] DEBUG: https://list.suning.com/1-502476-0.html
+2019-08-08 18:28:25 [root] DEBUG: https://list.suning.com/1-502298-0.html
+2019-08-08 18:28:25 [root] DEBUG: https://list.suning.com/1-502297-0.html
+2019-08-08 18:28:25 [root] DEBUG: https://list.suning.com/1-502316-0.html
+2019-08-08 18:28:25 [root] DEBUG: https://list.suning.com/0-502328-0.html
+2019-08-08 18:28:25 [root] DEBUG: https://list.suning.com/1-502315-0.html
+2019-08-08 18:28:25 [root] DEBUG: https://zjts.suning.com/
+2019-08-08 18:28:25 [root] DEBUG: 舍弃地址：https://zjts.suning.com/
+2019-08-08 18:28:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/robots.txt> (referer: None)
+2019-08-08 18:28:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502476-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:28:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502325-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:28:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502315-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:28:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502316-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:28:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502297-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:28:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/0-502328-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:28:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502298-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:28:25 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-08-08 18:28:25 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3449,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 518823,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 9,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1.215747,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 8, 8, 10, 28, 25, 971155),
+ 'log_count/DEBUG': 21,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 10,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2019, 8, 8, 10, 28, 24, 755408)}
+2019-08-08 18:28:25 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-08-08 18:36:07 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: suning_book)
+2019-08-08 18:36:07 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.7.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17763-SP0
+2019-08-08 18:36:07 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'suning_book', 'LOG_FILE': './log.log', 'NEWSPIDER_MODULE': 'suning_book.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['suning_book.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'}
+2019-08-08 18:36:07 [scrapy.extensions.telnet] INFO: Telnet Password: 28c95fe0b3e4b521
+2019-08-08 18:36:07 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-08 18:36:07 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-08 18:36:07 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-08 18:36:07 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-08-08 18:36:07 [scrapy.core.engine] INFO: Spider opened
+2019-08-08 18:36:07 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-08 18:36:07 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-08 18:36:08 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://book.suning.com/robots.txt> (referer: None)
+2019-08-08 18:36:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.suning.com/?safp=d488778a.homepage1.99345513004.47> (referer: None)
+2019-08-08 18:36:08 [root] DEBUG: https://list.suning.com/1-502325-0.html
+2019-08-08 18:36:08 [root] DEBUG: https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:36:08 [root] DEBUG: 舍弃地址：https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:36:08 [root] DEBUG: https://list.suning.com/1-502476-0.html
+2019-08-08 18:36:08 [root] DEBUG: https://list.suning.com/1-502298-0.html
+2019-08-08 18:36:08 [root] DEBUG: https://list.suning.com/1-502297-0.html
+2019-08-08 18:36:08 [root] DEBUG: https://list.suning.com/1-502316-0.html
+2019-08-08 18:36:08 [root] DEBUG: https://list.suning.com/0-502328-0.html
+2019-08-08 18:36:08 [root] DEBUG: https://list.suning.com/1-502315-0.html
+2019-08-08 18:36:08 [root] DEBUG: https://zjts.suning.com/
+2019-08-08 18:36:08 [root] DEBUG: 舍弃地址：https://zjts.suning.com/
+2019-08-08 18:36:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/robots.txt> (referer: None)
+2019-08-08 18:36:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502476-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:36:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502325-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:36:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502316-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:36:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/0-502328-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:36:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502297-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:36:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502298-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:36:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502315-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:36:09 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-08-08 18:36:09 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3449,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 519018,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 9,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1.226188,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 8, 8, 10, 36, 9, 127310),
+ 'log_count/DEBUG': 21,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 10,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2019, 8, 8, 10, 36, 7, 901122)}
+2019-08-08 18:36:09 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-08-08 18:37:12 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: suning_book)
+2019-08-08 18:37:12 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.7.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17763-SP0
+2019-08-08 18:37:12 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'suning_book', 'LOG_FILE': './log.log', 'NEWSPIDER_MODULE': 'suning_book.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['suning_book.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'}
+2019-08-08 18:37:12 [scrapy.extensions.telnet] INFO: Telnet Password: 07c1d03cb455acf0
+2019-08-08 18:37:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-08 18:37:12 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-08 18:37:12 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-08 18:37:12 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-08-08 18:37:12 [scrapy.core.engine] INFO: Spider opened
+2019-08-08 18:37:12 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-08 18:37:12 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-08 18:37:12 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://book.suning.com/robots.txt> (referer: None)
+2019-08-08 18:37:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.suning.com/?safp=d488778a.homepage1.99345513004.47> (referer: None)
+2019-08-08 18:37:13 [root] DEBUG: https://list.suning.com/1-502325-0.html
+2019-08-08 18:37:13 [root] DEBUG: https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:37:13 [root] DEBUG: 舍弃地址：https://redbaby.suning.com/tongshu.htm
+2019-08-08 18:37:13 [root] DEBUG: https://list.suning.com/1-502476-0.html
+2019-08-08 18:37:13 [root] DEBUG: https://list.suning.com/1-502298-0.html
+2019-08-08 18:37:13 [root] DEBUG: https://list.suning.com/1-502297-0.html
+2019-08-08 18:37:13 [root] DEBUG: https://list.suning.com/1-502316-0.html
+2019-08-08 18:37:13 [root] DEBUG: https://list.suning.com/0-502328-0.html
+2019-08-08 18:37:13 [root] DEBUG: https://list.suning.com/1-502315-0.html
+2019-08-08 18:37:13 [root] DEBUG: https://zjts.suning.com/
+2019-08-08 18:37:13 [root] DEBUG: 舍弃地址：https://zjts.suning.com/
+2019-08-08 18:37:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/robots.txt> (referer: None)
+2019-08-08 18:37:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502325-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:37:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502316-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:37:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502476-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:37:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502297-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:37:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502315-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:37:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/0-502328-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:37:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://list.suning.com/1-502298-0.html> (referer: https://book.suning.com/?safp=d488778a.homepage1.99345513004.47)
+2019-08-08 18:37:14 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-08-08 18:37:14 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3446,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 518841,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 9,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1.198821,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 8, 8, 10, 37, 14, 70010),
+ 'log_count/DEBUG': 21,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 10,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2019, 8, 8, 10, 37, 12, 871189)}
+2019-08-08 18:37:14 [scrapy.core.engine] INFO: Spider closed (finished)
