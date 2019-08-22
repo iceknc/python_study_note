@@ -11,4 +11,6 @@ import scrapy
 class SuningBookItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    class_name = scrapy.Field()
+    sub_class_name = scrapy.Field()
+    cate_url = scrapy.Field()
