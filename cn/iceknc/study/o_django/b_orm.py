@@ -23,7 +23,7 @@ ORM框架
             进入项目shell
                 python manage.py shell
             导入相关的models
-                from first_app.models import BookInfo, HeroInfo
+                from test_app.models import BookInfo, HeroInfo
             查询所有图书信息
                 BookInfo.objects.all()
                 BookInfo.objects.get(id=1)

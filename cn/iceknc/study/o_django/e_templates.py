@@ -24,7 +24,7 @@
 
                 def index(request):
                     # 1.获取模板
-                    template=loader.get_template('first_app/index.html')
+                    template=loader.get_template('test_app/index.html')
                     # 2.定义上下文
                     context = {'title': '图书列表', 'list': range(10)}
                     # 3.渲染模板
@@ -34,7 +34,7 @@
 
             def index(request):
                 context={'title':'图书列表','list':range(10)}
-                return render(request,'first_app/index.html',context=context, content_type='text/html; charset=utf-8')
+                return render(request,'test_app/index.html',context=context, content_type='text/html; charset=utf-8')
 
 """
 

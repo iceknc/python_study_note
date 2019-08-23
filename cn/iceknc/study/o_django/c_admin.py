@@ -26,7 +26,7 @@
             并进行增删改查操作。
             打开first_app/admin.py文件，编写如下代码：
                 from django.contrib import admin
-                from first_app.models import BookInfo,HeroInfo
+                from test_app.models import BookInfo,HeroInfo
 
                 admin.site.register(BookInfo)
                 admin.site.register(HeroInfo)

@@ -24,9 +24,9 @@
 
 创建应用
     使用一个应用开发一个业务模块
-    python manage.py startapp first_app
+    python manage.py startapp test_app
         项目结构
-            ----first_app
+            ----test_app
                 |----migrations
                 |   |----__init__.py
                 |----__init__.py

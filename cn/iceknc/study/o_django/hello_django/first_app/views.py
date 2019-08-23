@@ -7,10 +7,10 @@ from first_app.models import BookInfo, HeroInfo
 # Create your views here.
 
 def index(request):
-    # template = loader.get_template("first_app/index.html")
+    # template = loader.get_template("test_app/index.html")
     # context = {'title': '图书列表', 'list': range(10)}
     # return HttpResponse(template.render(context=context, request=request))
-    # return render(request, 'first_app/index.html', context={'title': '图书列表', 'list': range(10)}, content_type='text/html; charset=utf-8')
+    # return render(request, 'test_app/index.html', context={'title': '图书列表', 'list': range(10)}, content_type='text/html; charset=utf-8')
 
     # 查询所有图书
     booklist = BookInfo.objects.all()

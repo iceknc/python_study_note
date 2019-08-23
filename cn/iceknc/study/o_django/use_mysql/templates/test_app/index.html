@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书列表</title>
+</head>
+<body>
+<h1>{{title}}</h1>
+<br>
+<a href="/create/">创建</a>
+<br>
+<ul>
+    {#遍历图书列表#}
+    {%for book in list%}
+    <li>
+        {#输出图书名称，并设置超链接，链接地址是一个数字#}
+        <a href="/detail/{{book.id}}">{{book.btitle}}   ----  <a href="/delete/{{book.id}}">删除</a></a>
+    </li>
+    {%endfor%}
+</ul>
+</body>
+</html>

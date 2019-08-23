@@ -1,4 +1,4 @@
-"""hello_django URL Configuration
+"""use_mysql URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -19,7 +19,5 @@ from django.conf.urls import include,url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^', include('test_app.urls')),
-    url(r'^(\d+)/$', include('test_app.urls')),
-    url(r'home/', include('test_app.urls')),
+    url(r'^', include('test_app.urls'))
 ]
