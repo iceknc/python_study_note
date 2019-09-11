@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>url反向解析</title>
+</head>
+<body>
+area链接：<br>
+<a href="/area">地区</a>
+<br><br>
+url反向解析生成的area链接：<br>
+<a href="{% url 'test_app:area' %}">地区</a>
+<br>
+<hr>
+
+/area/44链接：<br>
+<a href="/area/44">/area/44</a>
+<br><br>
+url反向解析生成的/area/44链接：<br>
+<a href="{% url 'test_app:province_city' 44%}">/area/44</a>
+<br>
+<hr>
+
+/area/44/4402链接：<br>
+<a href="/area/44/4402">/area/44/4402</a>
+<br><br>
+url反向解析生成的/area/44/4402链接：<br>
+<a href="{% url 'test_app:province_city_county' pid=44 cid=4402%}">/area/44/4402</a>
+<br>
+<hr>
+</body>
+</html>

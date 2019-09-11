@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多级联动区域选择</title>
+    <script src="/static/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //页面加载完成后获取省信息，并添加到省select
+            $.get('/province_json/', function (dic) {
+                pro = $('#pro');
+                $.each(dic.data, function (index, item) {
+                    pro.append('<option value=' + item[0] + '>' + item[1] + '</option>');
+                })
+            });
+            //为省select绑定change事件，获取市信息，并添加到市select
+            $('#pro').change(function () {
+                $.get('/area_json/' + $(this).val() + '/', function (dic) {
+                    city = $('#city');
+                    city.empty().append('<option value="">请选择市</option>');
+                    county = $('#county');
+                    county.empty().append('<option value="">请选择区县</option>');
+                    village = $('#village');
+                    village.empty().append('<option value="">请选择区乡镇</option>');
+                    street = $('#street');
+                    street.empty().append('<option value="">请选择区街道</option>');
+                    $.each(dic.data, function (index, item) {
+                        city.append('<option value=' + item[0] + '>' + item[1] + '</option>');
+                    })
+                });
+            });
+            //为市select绑定change事件，获取区县信息，并添加到区县select
+            $('#city').change(function () {
+                $.get('/area_json/' + $(this).val() + '/', function (dic) {
+                    county = $('#county');
+                    county.empty().append('<option value="">请选择区县</option>');
+                    village = $('#village');
+                    village.empty().append('<option value="">请选择区乡镇</option>');
+                    street = $('#street');
+                    street.empty().append('<option value="">请选择区街道</option>');
+                    $.each(dic.data, function (index, item) {
+                        county.append('<option value=' + item[0] + '>' + item[1] + '</option>');
+                    })
+                })
+            });
+            //为市select绑定change事件，获取区县信息，并添加到区县select
+            $('#county').change(function () {
+                $.get('/area_json/' + $(this).val() + '/', function (dic) {
+                    street = $('#street');
+                    street.empty().append('<option value="">请选择区街道</option>');
+                    village = $('#village');
+                    $.each(dic.data, function (index, item) {
+                        village.append('<option value=' + item[0] + '>' + item[1] + '</option>');
+                    })
+                })
+            });
+            $('#village').change(function () {
+                $.get('/area_json/' + $(this).val() + '/', function (dic) {
+                    street = $('#street');
+                    $.each(dic.data, function (index, item) {
+                        street.append('<option value=' + item[0] + '>' + item[1] + '</option>');
+                    })
+                })
+            });
+        })
+    </script>
+</head>
+<body>
+<select id="pro">
+    <option value="">请选择省</option>
+</select>
+<select id="city">
+    <option value="">请选择市</option>
+</select>
+<select id="county">
+    <option value="">请选择区县</option>
+</select>
+<select id="village">
+    <option value="">请选择乡镇</option>
+</select>
+<select id="street">
+    <option value="">请选择街道</option>
+</select>
+</body>
+</html>

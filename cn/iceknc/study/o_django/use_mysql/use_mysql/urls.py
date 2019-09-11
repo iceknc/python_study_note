@@ -19,5 +19,7 @@ from django.conf.urls import include,url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^', include('test_app.urls'))
+    url(r'^', include('test_app.urls', namespace='test_app')),
+    url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^search/', include('haystack.urls')),
 ]

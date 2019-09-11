@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post_get</title>
+</head>
+<body>
+...
+...
+3.提交数据的两种方式：
+get方式:<br/>
+<a href="/showReqArg/?a=1&b=2&c=python">get方式提交数据</a><br/>
+post方式:<br/>
+<form method="post" action="/showReqArg/">
+    姓名：<input type="text" name="user_name"><br/>
+    性别：男<input type="radio" name="gender" value="男"/>
+    女<input type="radio" name="gender" value="女"/><br/>
+    爱好：
+    吃饭<input type="checkbox" name="hobby" value="吃饭"/>
+    睡觉<input type="checkbox" name="hobby" value="睡觉"/>
+    打豆豆<input type="checkbox" name="hobby" value="打豆豆"/><br>
+    <input type="submit" value="提交">
+</form>
+<br/>
+</body>
+</html>

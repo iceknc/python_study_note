@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省级行政区列表</title>
+    <style>
+        a {
+            text-decoration: none
+        }
+    </style>
+</head>
+<body>
+<h1>省级行政区列表</h1>
+<br>
+<ul>
+    {#遍历图书列表#}
+    {%for province in list%}
+    <li>
+        <a href="/area/{{province.code}}">{{province.name}}</a>
+    </li>
+    {%endfor%}
+</ul>
+</body>
+</html>

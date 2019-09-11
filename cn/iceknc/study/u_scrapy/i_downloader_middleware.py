@@ -70,7 +70,12 @@ from fake_useragent import UserAgent
 
 def main():
     ua = UserAgent(cache=True)
-    print(ua.random)
+    for i in range(100):
+        # print(ua.ie)  # 随机打印ie浏览器任意版本
+        print(ua.firefox)  # 随机打印firefox浏览器任意版本
+        # print(ua.opera)
+        # print(ua.chrome)  # 随机打印chrome浏览器任意版本
+        # print(ua.random)  # 随机打印任意厂家的浏览器
 
 
 if __name__ == "__main__":

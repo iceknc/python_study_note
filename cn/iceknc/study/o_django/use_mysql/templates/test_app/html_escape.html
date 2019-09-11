@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转义</title>
+</head>
+<body>
+自动转义：{{content}}
+<hr>
+过滤器escape默认打开转义：{{content|escape}}
+<hr>
+过滤器safe关闭转义：{{content|safe}}
+<hr>
+标签autoescape关闭转义：
+{%autoescape off%}
+{{content}}
+{%endautoescape%}
+<hr>
+模板硬编码不转义：{{data|default:'<b>hello</b>'}}
+<hr>
+模板硬编码手动转义：{{data|default:"&lt;b&gt;123&lt;/b&gt;"}}
+</body>
+</html>

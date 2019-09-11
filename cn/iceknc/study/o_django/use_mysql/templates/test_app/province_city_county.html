@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省市级行政区列表</title>
+    <style>
+        a {
+            text-decoration: none
+        }
+    </style>
+</head>
+<body>
+<h1><a href="/area"><<</a> <a href="/area/{{pid}}">{{pname}}</a> -- {{cname}}</h1>
+<br>
+<ul>
+    {%for region in list%}
+    <li>
+        <h3>{{region.name}}</h3>
+    </li>
+    {%endfor%}
+</ul>
+</body>
+</html>

@@ -36,11 +36,55 @@
             在列表页只显示出了BookInfo object，对象的其它属性并没有列出来，查看非常不方便。 Django提供了自定义管理页面的功能，
             比如列表页要显示哪些值
             打开first_app/admin.py文件，自定义类，继承自admin.ModelAdmin类。
-                属性list_display表示要显示哪些属性
                 class BookInfoAdmin(admin.ModelAdmin):
-                    list_display = ['id', 'btitle', 'bpub_date']
+                    list_display = ['id', 'btitle', 'bpub_date']  #表示要显示哪些属性
+                        列可以是模型字段，还可以是模型方法，要求方法有返回值。
+                            short_description='列标题'  #列标题默认为属性或方法的名称，可以通过属性设置方法的显示名字。
+                    list_per_page=100  #每页中显示多少条数据，默认为每页显示100条数据
+                    actions_on_top=True  #顶部显示的属性，设置为True在顶部显示，设置为False不在顶部显示，默认为True。
+                    actions_on_bottom=False #底部显示的属性，设置为True在底部显示，设置为False不在底部显示，默认为False。
+                    ordering=['字段1','-字段2'] #定排序依据。 字段前面加负号表示逆序
+                    list_filter=[] #右侧栏过滤器,会将对应字段的值列出来，用于快速过滤。
+                    search_fields=[] #搜索框,于对指定字段的值进行搜索，支持模糊查询。
                 修改模型类BookInfo的注册代码如下
                     admin.site.register(BookInfo, BookInfoAdmin)
+            中文标题
+                打开first_app/models.py文件，修改模型类，为属性指定verbose_name参数，即第一个参数。
+                    atitle=models.CharField('标题',max_length=30)#名称
+                    short_description='列标题'  #列标题默认为属性或方法的名称，可以通过属性设置方法的显示名字。
+        编辑页选项
+            显示字段顺序
+                属性：fields=[]
+            修改关联属性的显示，在关联类中添加str方法
+                def __str__(self):
+                    return "xxx"
+            分组显示
+                属性：fieldset=(
+                        ('组1标题',{'fields':('字段1','字段2')}),
+                        ('组2标题',{'fields':('字段3','字段4')}),
+                     )
+            关联对象
+                在一对多的关系中，可以在一端的编辑页面中编辑多端的对象，嵌入多端对象的方式包括表格、块两种。
+                类型InlineModelAdmin：表示在模型的编辑页面嵌入关联模型的编辑。
+                子类TabularInline：以表格的形式嵌入。
+                    打开<应用名>/admin.py文件，创建XxxTabularInline类。
+                        class XxxTabularInline(admin.TabularInline):
+                            model = XXXX #写多类的名字
+                            extra = 2 #额外编辑2个子对象
+                    打开<应用名>/admin.py文件，修改一类的Admin类如下：
+                        classYyyyAdmin(admin.ModelAdmin):
+                            ...
+                            inlines = [XxxTabularInline]
+                子类StackedInline：以块的形式嵌入。
+                    打开<应用名>/admin.py文件，创建XxxStackedInline类。
+                        class XxxStackedInline(admin.StackedInline):
+                            model = XXXX #写多类的名字
+                            extra = 2 #额外编辑2个子对象
+                    打开<应用名>/admin.py文件，修改一类的Admin类如下：
+                        classYyyyAdmin(admin.ModelAdmin):
+                            ...
+                            inlines = [XxxStackedInline]
+
 
 """
 

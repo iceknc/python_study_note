@@ -11,11 +11,19 @@
 <br>
 <ul>
     {#遍历图书列表#}
+    {%load filters%}
     {%for book in list%}
-    <li>
-        {#输出图书名称，并设置超链接，链接地址是一个数字#}
-        <a href="/detail/{{book.id}}">{{book.btitle}}   ----  <a href="/delete/{{book.id}}">删除</a></a>
-    </li>
+        {%if book.id|mod%}
+            <li>
+                {#输出图书名称，并设置超链接，链接地址是一个数字#}
+                <a href="/detail/{{book.id}}">{{book.btitle}}   ----  <a href="/delete/{{book.id}}">删除</a></a>
+            </li>
+        {%else%}
+            <li style="background-color: coral">
+                {#输出图书名称，并设置超链接，链接地址是一个数字#}
+                <a href="/detail/{{book.id}}">{{book.btitle}}   ----  <a href="/delete/{{book.id}}">删除</a></a>
+            </li>
+        {%endif%}
     {%endfor%}
 </ul>
 </body>

@@ -48,6 +48,9 @@
 
         # xml格式
         scrapy crawl itcast -o teachers.xml
+
+        #启动爬虫
+        scrapy crawl itcast
 """
 
 def main():
