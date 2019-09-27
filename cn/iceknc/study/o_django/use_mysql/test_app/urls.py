@@ -45,6 +45,8 @@ urlpatterns = [
     url(r'^edit/$', views.edit),
     url(r'^show/', views.show),
     url(r'^query/', views.query),
+    url(r'^session_set/$',views.session_set),
+    url(r'^session_get/$', views.session_get),
 ]
 
 

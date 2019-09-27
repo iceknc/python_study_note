@@ -292,3 +292,11 @@ def show(request):
 
 def query(request):
     return render(request,'test_app/query.html')
+
+def session_set(request):
+      request.session['name']='use_redis'
+      return HttpResponse('ok')
+
+def session_get(request):
+      name=request.session['name']
+      return HttpResponse(name)
